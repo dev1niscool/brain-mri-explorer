@@ -1,0 +1,6 @@
+Nature Portfolio wordmark
+Official asset: https://media.springernature.com/full/nature-cms/uploads/product/nature-portfolio/header-c5ee416ebbaa556dd9dc726041eafb0d.svg
+Source page: https://www.nature.com/nature-portfolio/
+Retrieved 2026-09-29. SVG file retained unchanged.
+Used to identify the publisher of the linked Scientific Reports paper by Rorden and colleagues (2025), DOI 10.1038/s41598-025-00014-5.
+Nature Portfolio branding belongs to its respective owner and is not included in the website code license.

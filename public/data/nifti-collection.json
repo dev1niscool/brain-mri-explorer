@@ -1,0 +1,330 @@
+{
+  "version": 1,
+  "file": "devin-mri-nifti-collection.zip",
+  "bytes": 74224408,
+  "sizeLabel": "74.22 MB",
+  "sha256": "30e4a07b5194cb3f475048b6cb46e10094bc4f33be00f99ef1ac630798390670",
+  "fileCount": 11,
+  "sourceFileCount": 9,
+  "derivedFileCount": 2,
+  "readmeFile": "README.txt",
+  "readmeSha256": "ac11211fa94db8cc7239eae741884e5ff35db329e2d3c219eabdd5b8c02351a5",
+  "files": [
+    {
+      "file": "t1-axial.nii.gz",
+      "label": "T1 FLAIR \u00b7 axial",
+      "group": "source",
+      "description": "Native-grid T1 MRI used by the saved Brain2Print run.",
+      "bytes": 9530270,
+      "sizeLabel": "9.53 MB",
+      "dimensions": [
+        512,
+        512,
+        29
+      ],
+      "dtype": "float32",
+      "spacingMm": [
+        0.4687999965121461,
+        0.4688000073148025,
+        6.5000834697507
+      ],
+      "orientation": [
+        "R",
+        "A",
+        "S"
+      ],
+      "sha256": "3ce918fdba00ade86dba2e07a6bb283d260e04b360cac0977575c74260ca65c4",
+      "niftiExtensions": 0,
+      "headerTextAllowlistPassed": true
+    },
+    {
+      "file": "t2-axial.nii.gz",
+      "label": "T2 \u00b7 axial",
+      "group": "source",
+      "description": "Native-grid T2-weighted scan.",
+      "bytes": 10031968,
+      "sizeLabel": "10.03 MB",
+      "dimensions": [
+        512,
+        512,
+        29
+      ],
+      "dtype": "float32",
+      "spacingMm": [
+        0.4687999965121461,
+        0.4688000073148025,
+        6.5000834697507
+      ],
+      "orientation": [
+        "R",
+        "A",
+        "S"
+      ],
+      "sha256": "ca6d30afad606709389d53c5bdb02b80ecb71a5c2b25738fdc8139a406626e34",
+      "niftiExtensions": 0,
+      "headerTextAllowlistPassed": true
+    },
+    {
+      "file": "flair-axial.nii.gz",
+      "label": "T2 FLAIR \u00b7 axial",
+      "group": "source",
+      "description": "Native-grid fluid-suppressed T2-weighted scan.",
+      "bytes": 9041472,
+      "sizeLabel": "9.04 MB",
+      "dimensions": [
+        512,
+        512,
+        29
+      ],
+      "dtype": "float32",
+      "spacingMm": [
+        0.4687999965121461,
+        0.4688000073148025,
+        6.5000834697507
+      ],
+      "orientation": [
+        "R",
+        "A",
+        "S"
+      ],
+      "sha256": "01361f0a7405191f02fa96d0e597f5ea07805ecbb217e6dc5fc73d6aefe4e1ad",
+      "niftiExtensions": 0,
+      "headerTextAllowlistPassed": true
+    },
+    {
+      "file": "t1-sagittal.nii.gz",
+      "label": "T1 FLAIR \u00b7 sagittal",
+      "group": "source",
+      "description": "Independent native-grid sagittal T1 acquisition.",
+      "bytes": 11927119,
+      "sizeLabel": "11.93 MB",
+      "dimensions": [
+        26,
+        512,
+        512
+      ],
+      "dtype": "float32",
+      "spacingMm": [
+        6.500029719409179,
+        0.46880000362850444,
+        0.4688000137363765
+      ],
+      "orientation": [
+        "R",
+        "A",
+        "S"
+      ],
+      "sha256": "e2de9bc8a2e44f32a5369d773273e118492b96ce1ecc0e88894f0ed63a5879f3",
+      "niftiExtensions": 0,
+      "headerTextAllowlistPassed": true
+    },
+    {
+      "file": "flair-coronal.nii.gz",
+      "label": "T2 FLAIR \u00b7 coronal",
+      "group": "source",
+      "description": "Independent native-grid coronal FLAIR acquisition.",
+      "bytes": 10871979,
+      "sizeLabel": "10.87 MB",
+      "dimensions": [
+        512,
+        34,
+        512
+      ],
+      "dtype": "float32",
+      "spacingMm": [
+        0.4688000146827374,
+        6.500005611952964,
+        0.468800009862171
+      ],
+      "orientation": [
+        "R",
+        "A",
+        "S"
+      ],
+      "sha256": "79eb10e40680a83d6a07ca2a9d17c1be8bd5778ab379784c51e53680179c25ad",
+      "niftiExtensions": 0,
+      "headerTextAllowlistPassed": true
+    },
+    {
+      "file": "merge-axial.nii.gz",
+      "label": "MERGE \u00b7 axial",
+      "group": "source",
+      "description": "Native-grid gradient-echo scan.",
+      "bytes": 11111776,
+      "sizeLabel": "11.11 MB",
+      "dimensions": [
+        512,
+        512,
+        29
+      ],
+      "dtype": "float32",
+      "spacingMm": [
+        0.4687999965121461,
+        0.4688000073148025,
+        6.5000834697507
+      ],
+      "orientation": [
+        "R",
+        "A",
+        "S"
+      ],
+      "sha256": "2b06da0043646c37d141f9f0601901ea86bba9c94c422098628eab9fcd59ed97",
+      "niftiExtensions": 0,
+      "headerTextAllowlistPassed": true
+    },
+    {
+      "file": "dwi-b1000.nii.gz",
+      "label": "Diffusion \u00b7 b1000",
+      "group": "source",
+      "description": "Native-grid diffusion-weighted stack; b=1000 s/mm\u00b2.",
+      "bytes": 2677404,
+      "sizeLabel": "2.68 MB",
+      "dimensions": [
+        256,
+        256,
+        29
+      ],
+      "dtype": "float32",
+      "spacingMm": [
+        0.9375000277303092,
+        0.9374999717814875,
+        6.500058915880993
+      ],
+      "orientation": [
+        "R",
+        "A",
+        "S"
+      ],
+      "sha256": "ffc5baf1e6cae639fd65b42c590c42c56b42c43dabc7f004f66b2c5774b13886",
+      "niftiExtensions": 0,
+      "headerTextAllowlistPassed": true
+    },
+    {
+      "file": "dwi-reference.nii.gz",
+      "label": "Diffusion \u00b7 reference",
+      "group": "source",
+      "description": "Native-grid companion diffusion stack; b value is unspecified in standard source metadata.",
+      "bytes": 3167884,
+      "sizeLabel": "3.17 MB",
+      "dimensions": [
+        256,
+        256,
+        29
+      ],
+      "dtype": "float32",
+      "spacingMm": [
+        0.9375000277303092,
+        0.9374999717814875,
+        6.500058915880993
+      ],
+      "orientation": [
+        "R",
+        "A",
+        "S"
+      ],
+      "sha256": "f1dd210b76b388f458003ccbd59cb72063e106945aa9406a6fe9961ed6200a28",
+      "niftiExtensions": 0,
+      "headerTextAllowlistPassed": true
+    },
+    {
+      "file": "adc.nii.gz",
+      "label": "ADC map",
+      "group": "source",
+      "description": "Original source-derived apparent diffusion coefficient map, retaining its native grid and stored scalar values after the source rescale.",
+      "bytes": 1546809,
+      "sizeLabel": "1.55 MB",
+      "dimensions": [
+        256,
+        256,
+        29
+      ],
+      "dtype": "float32",
+      "spacingMm": [
+        0.9374999692327817,
+        0.9375000317835689,
+        6.499984873960535
+      ],
+      "orientation": [
+        "R",
+        "A",
+        "S"
+      ],
+      "sha256": "41bba610cd5eee52e4e12219e14fcd2835dedf6e4d420fc6f182ddb31c821deb",
+      "niftiExtensions": 0,
+      "headerTextAllowlistPassed": true
+    },
+    {
+      "file": "b2p-conformed.nii.gz",
+      "label": "Brain2Print \u00b7 resampled MRI",
+      "group": "brain2print",
+      "description": "Resampled and intensity-normalized 256\u00b3 uint8 input captured from the actual Brain2Print browser run.",
+      "bytes": 3955722,
+      "sizeLabel": "3.96 MB",
+      "dimensions": [
+        256,
+        256,
+        256
+      ],
+      "dtype": "uint8",
+      "spacingMm": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "orientation": [
+        "L",
+        "I",
+        "A"
+      ],
+      "sha256": "87a4284527ce956f730b636f046df773584e38573ab6af76612b9232c9714fe4",
+      "niftiExtensions": 0,
+      "headerTextAllowlistPassed": true
+    },
+    {
+      "file": "b2p-segmentation.nii.gz",
+      "label": "Brain2Print \u00b7 automated labels",
+      "group": "brain2print",
+      "description": "Captured 18-class automated label image; includes background and may omit or misclassify anatomy.",
+      "bytes": 357571,
+      "sizeLabel": "0.36 MB",
+      "dimensions": [
+        256,
+        256,
+        256
+      ],
+      "dtype": "uint8",
+      "spacingMm": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "orientation": [
+        "L",
+        "I",
+        "A"
+      ],
+      "sha256": "92b11da7d3df24065bb917026978858209e5c35e4162eb62e94fc75f3cc02db9",
+      "niftiExtensions": 0,
+      "headerTextAllowlistPassed": true
+    }
+  ],
+  "localizerNote": "The original localizer has three differently oriented five-image planning groups; it is not one coherent regular 3D stack and has no existing public NIfTI.",
+  "verification": {
+    "all11NiftiFilesValid": true,
+    "headerTextAllowlistPassed": true,
+    "noNiftiExtensions": true,
+    "zipCrcPassed": true,
+    "allArchivedFilesByteIdenticalToExistingPublicFiles": true,
+    "allPublishedProvenanceHashesMatch": true,
+    "archiveBelow100MiB": true,
+    "sourceFilesUnchanged": true
+  },
+  "archiveMethod": "Fixed file order, timestamp and permissions; existing gzip NIfTIs stored without redundant recompression; README deflated",
+  "downloadAccess": {
+    "mode": "password-protected",
+    "service": "Cloudflare Worker",
+    "config": "../../download-service.json",
+    "publicFilesPresent": false,
+    "publicDisplayCopies": "Separate quantized viewing copies remain public; they are not the protected originals."
+  }
+}

@@ -1,0 +1,34 @@
+.nifti-download-link { padding: 0; text-align: left; }
+.b2p-credit-links .nifti-download-link { color: #b3d3c5; font: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.b2p-credit-links .nifti-download-link:hover { color: #e2edf5; }
+.b2p-nifti-downloads li .nifti-download-link { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; width: 100%; padding: 9px 0; color: #b3d3c5; font-size: 11px; line-height: 1.65; }
+.b2p-nifti-downloads li .nifti-download-link:hover { color: #e2edf5; text-decoration: underline; text-underline-offset: 3px; }
+.nifti-dialog { width: calc(100% - 32px); max-width: 440px; max-height: calc(100dvh - 32px); padding: 28px; border-radius: 26px; background: linear-gradient(145deg, #1a2e42f7, #112235fc); border: 1px solid #83adc34a; box-shadow: 0 28px 100px #020a16b3, inset 0 1px 0 #d7f7ff0a; }
+.nifti-dialog::backdrop { background: #030912ba; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.nifti-dialog-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 21px; }
+.nifti-lock { display: grid; place-items: center; width: 45px; height: 45px; color: #b3dccb; background: #8ac7ab13; border: 1px solid #9ed6ba2e; border-radius: 14px; }
+.nifti-lock svg { width: 24px; height: 24px; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.nifti-dialog h2 { margin: 0 0 10px; color: #e4eff8; font-size: 28px; font-weight: 500; letter-spacing: -.9px; line-height: 1.2; }
+.nifti-dialog p { margin: 0; }
+#nifti-download-description { color: #b5c8d9; font-size: 13px; line-height: 1.7; }
+.nifti-dialog .nifti-selected-file { margin: 16px 0 23px; padding: 11px 13px; border: 1px solid #829db42b; border-radius: 10px; background: #0917274a; color: #c7dbe8; font-size: 11px; line-height: 1.6; overflow-wrap: anywhere; }
+.nifti-dialog label { display: block; margin-bottom: 8px; color: #cfdeea; font-size: 12px; }
+.nifti-dialog input[type="password"] { display: block; width: 100%; height: 47px; padding: 11px 13px; border: 1px solid #779ab45c; border-radius: 11px; background: #091a2aa6; color: #eaf6ff; font-size: 16px; outline-offset: 3px; }
+.nifti-dialog input[type="password"][aria-invalid="true"] { border-color: #e4a2aeaa; }
+.nifti-dialog input:disabled { opacity: .65; }
+.nifti-download-feedback { min-height: 56px; padding-top: 11px; }
+#nifti-download-status { color: #accabc; font-size: 12px; line-height: 1.55; }
+#nifti-download-status.is-error { color: #f0bac2; }
+#nifti-download-progress { display: block; width: 100%; height: 4px; margin-top: 8px; overflow: hidden; border: 0; border-radius: 5px; accent-color: #a9d2bf; background: #2a4258; }
+#nifti-download-progress[hidden] { display: none; }
+#nifti-download-progress::-webkit-progress-bar { border-radius: 5px; background: #2a4258; }
+#nifti-download-progress::-webkit-progress-value { border-radius: 5px; background: #a9d2bf; }
+#nifti-download-progress::-moz-progress-bar { border-radius: 5px; background: #a9d2bf; }
+.nifti-dialog-actions { display: grid; grid-template-columns: 1fr 1.45fr; gap: 11px; margin-top: 9px; }
+.nifti-dialog-actions .button { min-height: 44px; }
+.nifti-dialog-actions .primary { color: #102c29; background: #b1d9c6; border-color: #c2ead7; }
+.nifti-dialog-actions .primary:hover { color: #102c29; background: #c5e8d8; }
+.nifti-dialog-actions .button:disabled { cursor: default; }
+@media (max-width: 420px) { .nifti-dialog { padding: 23px; } .nifti-dialog h2 { font-size: 26px; } }
+
+.b2p-credit-copy .nifti-access-note { margin: 10px 0 0; color: #8da5b8; font-size: 10px; line-height: 1.6; }

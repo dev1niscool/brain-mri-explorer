@@ -1,0 +1,572 @@
+{
+  "version": 1,
+  "defaultSeries": "t1-axial",
+  "coordinateSystem": "RAS",
+  "volumeFormat": "uint8; gzip; x fastest; axis-aligned RAS",
+  "series": [
+    {
+      "id": "t1-axial",
+      "label": "T1 \u00b7 axial",
+      "sequence": "T1 FLAIR",
+      "description": "Structural T1-weighted acquisition",
+      "dims": [
+        221,
+        241,
+        197
+      ],
+      "spacing": [
+        1.25,
+        1.25,
+        1.25
+      ],
+      "origin": [
+        -136.875,
+        -138.75,
+        -135.0
+      ],
+      "file": "t1-axial.raw.gz",
+      "nifti": "t1-axial.nii.gz",
+      "sourceSlices": 29,
+      "nativeSpacing": [
+        0.4688,
+        0.4688,
+        6.500083278791513
+      ],
+      "sliceThickness": 5.0,
+      "gapMm": 1.5,
+      "nativeDims": [
+        512,
+        512,
+        29
+      ],
+      "windowIntensity": [
+        0.3670315200090408,
+        3050.3607392578024
+      ],
+      "bytes": 2436897,
+      "originWorldRAS": [
+        -139.04977,
+        -85.78852,
+        -136.443
+      ]
+    },
+    {
+      "id": "t2-axial",
+      "label": "T2 \u00b7 axial",
+      "sequence": "T2",
+      "description": "T2-weighted acquisition",
+      "dims": [
+        221,
+        241,
+        197
+      ],
+      "spacing": [
+        1.25,
+        1.25,
+        1.25
+      ],
+      "origin": [
+        -136.875,
+        -138.75,
+        -135.0
+      ],
+      "file": "t2-axial.raw.gz",
+      "nifti": "t2-axial.nii.gz",
+      "sourceSlices": 29,
+      "nativeSpacing": [
+        0.4688,
+        0.4688,
+        6.500083278791513
+      ],
+      "sliceThickness": 5.0,
+      "gapMm": 1.5,
+      "nativeDims": [
+        512,
+        512,
+        29
+      ],
+      "windowIntensity": [
+        3.777684319019318,
+        3084.0264160156203
+      ],
+      "bytes": 2638531,
+      "originWorldRAS": [
+        -139.04977,
+        -85.78852,
+        -136.443
+      ]
+    },
+    {
+      "id": "flair-axial",
+      "label": "FLAIR \u00b7 axial",
+      "sequence": "T2 FLAIR",
+      "description": "Fluid-suppressed T2-weighted acquisition",
+      "dims": [
+        221,
+        241,
+        197
+      ],
+      "spacing": [
+        1.25,
+        1.25,
+        1.25
+      ],
+      "origin": [
+        -136.875,
+        -138.75,
+        -135.0
+      ],
+      "file": "flair-axial.raw.gz",
+      "nifti": "flair-axial.nii.gz",
+      "sourceSlices": 29,
+      "nativeSpacing": [
+        0.4688,
+        0.4688,
+        6.500083278791513
+      ],
+      "sliceThickness": 5.0,
+      "gapMm": 1.5,
+      "nativeDims": [
+        512,
+        512,
+        29
+      ],
+      "windowIntensity": [
+        4.123616962432861,
+        766.1668115234374
+      ],
+      "bytes": 3358010,
+      "originWorldRAS": [
+        -139.04977,
+        -85.78852,
+        -136.443
+      ]
+    },
+    {
+      "id": "t1-sagittal",
+      "label": "T1 \u00b7 sagittal",
+      "sequence": "T1 FLAIR",
+      "description": "Sagittal structural acquisition",
+      "dims": [
+        163,
+        241,
+        238
+      ],
+      "spacing": [
+        1.25,
+        1.25,
+        1.25
+      ],
+      "origin": [
+        -97.99063,
+        -147.68928,
+        -153.08322
+      ],
+      "file": "t1-sagittal.raw.gz",
+      "nifti": "t1-sagittal.nii.gz",
+      "sourceSlices": 26,
+      "nativeSpacing": [
+        0.4688,
+        0.4688,
+        6.500029579163465
+      ],
+      "sliceThickness": 5.0,
+      "gapMm": 1.5,
+      "nativeDims": [
+        26,
+        512,
+        512
+      ],
+      "windowIntensity": [
+        0.5256088894605637,
+        2875.0606826171897
+      ],
+      "bytes": 2431788,
+      "originWorldRAS": [
+        -100.16541,
+        -94.7278,
+        -154.52622
+      ]
+    },
+    {
+      "id": "flair-coronal",
+      "label": "FLAIR \u00b7 coronal",
+      "sequence": "T2 FLAIR",
+      "description": "Fluid-suppressed coronal acquisition",
+      "dims": [
+        213,
+        223,
+        230
+      ],
+      "spacing": [
+        1.25,
+        1.25,
+        1.25
+      ],
+      "origin": [
+        -129.90179,
+        -130.04492,
+        -158.63032
+      ],
+      "file": "flair-coronal.raw.gz",
+      "nifti": "flair-coronal.nii.gz",
+      "sourceSlices": 34,
+      "nativeSpacing": [
+        0.4688,
+        0.4688,
+        6.500005729659012
+      ],
+      "sliceThickness": 5.0,
+      "gapMm": 1.5,
+      "nativeDims": [
+        512,
+        34,
+        512
+      ],
+      "windowIntensity": [
+        2.7282551383972167,
+        788.4898637695308
+      ],
+      "bytes": 3890819,
+      "originWorldRAS": [
+        -132.07657,
+        -77.08344,
+        -160.07331
+      ]
+    },
+    {
+      "id": "merge-axial",
+      "label": "MERGE \u00b7 axial",
+      "sequence": "MERGE",
+      "description": "Gradient-echo acquisition",
+      "dims": [
+        221,
+        241,
+        197
+      ],
+      "spacing": [
+        1.25,
+        1.25,
+        1.25
+      ],
+      "origin": [
+        -136.875,
+        -138.75,
+        -135.0
+      ],
+      "file": "merge-axial.raw.gz",
+      "nifti": "merge-axial.nii.gz",
+      "sourceSlices": 29,
+      "nativeSpacing": [
+        0.4688,
+        0.4688,
+        6.500083278791513
+      ],
+      "sliceThickness": 5.0,
+      "gapMm": 1.5,
+      "nativeDims": [
+        512,
+        512,
+        29
+      ],
+      "windowIntensity": [
+        16.74912780761719,
+        1499.9137089843762
+      ],
+      "bytes": 3494130,
+      "originWorldRAS": [
+        -139.04977,
+        -85.78852,
+        -136.443
+      ]
+    },
+    {
+      "id": "dwi-b1000",
+      "label": "DWI \u00b7 b1000",
+      "sequence": "DWI",
+      "description": "Diffusion-weighted stack; b=1000 s/mm\u00b2",
+      "dims": [
+        221,
+        241,
+        197
+      ],
+      "spacing": [
+        1.25,
+        1.25,
+        1.25
+      ],
+      "origin": [
+        -136.59198,
+        -138.47134,
+        -134.933
+      ],
+      "file": "dwi-b1000.raw.gz",
+      "nifti": "dwi-b1000.nii.gz",
+      "sourceSlices": 29,
+      "nativeSpacing": [
+        0.9375,
+        0.9375,
+        6.500058989547711
+      ],
+      "sliceThickness": 5.0,
+      "gapMm": 1.5,
+      "nativeDims": [
+        256,
+        256,
+        29
+      ],
+      "windowIntensity": [
+        0.3245244437456131,
+        1974.182187011721
+      ],
+      "bytes": 2534420,
+      "originWorldRAS": [
+        -138.76675,
+        -85.50986,
+        -136.37599
+      ]
+    },
+    {
+      "id": "dwi-reference",
+      "label": "DWI \u00b7 reference",
+      "sequence": "DWI",
+      "description": "Companion diffusion stack; b value is not specified in standard source metadata",
+      "dims": [
+        221,
+        241,
+        197
+      ],
+      "spacing": [
+        1.25,
+        1.25,
+        1.25
+      ],
+      "origin": [
+        -136.59198,
+        -138.47134,
+        -134.933
+      ],
+      "file": "dwi-reference.raw.gz",
+      "nifti": "dwi-reference.nii.gz",
+      "sourceSlices": 29,
+      "nativeSpacing": [
+        0.9375,
+        0.9375,
+        6.500058989547711
+      ],
+      "sliceThickness": 5.0,
+      "gapMm": 1.5,
+      "nativeDims": [
+        256,
+        256,
+        29
+      ],
+      "windowIntensity": [
+        0.3612451809644699,
+        7374.322507812438
+      ],
+      "bytes": 2287343,
+      "originWorldRAS": [
+        -138.76675,
+        -85.50986,
+        -136.37599
+      ]
+    },
+    {
+      "id": "adc",
+      "label": "ADC",
+      "sequence": "ADC",
+      "description": "Derived apparent diffusion coefficient map; display intensity is normalized",
+      "dims": [
+        221,
+        241,
+        197
+      ],
+      "spacing": [
+        1.25,
+        1.25,
+        1.25
+      ],
+      "origin": [
+        -136.592,
+        -138.47135,
+        -134.93301
+      ],
+      "file": "adc.raw.gz",
+      "nifti": "adc.nii.gz",
+      "sourceSlices": 29,
+      "nativeSpacing": [
+        0.9375,
+        0.9375,
+        6.4999848721627504
+      ],
+      "sliceThickness": 5.0,
+      "gapMm": 1.5,
+      "nativeDims": [
+        256,
+        256,
+        29
+      ],
+      "windowIntensity": [
+        10.020588951110842,
+        3522.8421035156234
+      ],
+      "bytes": 2062857,
+      "originWorldRAS": [
+        -138.76677,
+        -85.50987,
+        -136.37601
+      ]
+    }
+  ],
+  "models": {
+    "brain": {
+      "file": "brain.stl",
+      "glb": "brain.glb",
+      "units": "mm",
+      "triangles": 120000,
+      "vertices": 60002,
+      "watertight": true,
+      "windingConsistent": true,
+      "components": 1,
+      "dimensionsMm": [
+        142.461,
+        164.791,
+        131.311
+      ],
+      "boundsMm": [
+        [
+          -71.154,
+          -82.569,
+          -65.25
+        ],
+        [
+          71.307,
+          82.221,
+          66.061
+        ]
+      ],
+      "volumeMl": 1458.945,
+      "bytes": 6000084,
+      "sourceSeries": "t1-axial",
+      "label": "Brain tissue surface",
+      "method": "HD-BET v2 brain extraction, conservative T1 low-signal exclusion (350 source intensity), largest connected component, enclosed-hole fill, mild smoothing and surface simplification. Refined surface: physical signed-distance smoothing with 3.5 mm Gaussian sigma along the acquisition slice normal and 1.25 mm in-plane, then the zero isosurface; no template anatomy or global rescaling. Surface finish: 100 Taubin iterations, lambda 0.5 / nu 0.53, with preserved connectivity and physical scale.",
+      "limitations": "Approximate tissue envelope from 5 mm slices / 6.5 mm spacing. Surface grooves are limited by interpolation; not a validated cortical reconstruction or quantitative brain-volume measurement. Smoothing reduces slice steps and also suppresses small measured details; anatomical accuracy has not been clinically validated. This finish reduces surface texture and does not recover higher-resolution anatomy or establish improved anatomical accuracy.",
+      "brain2printNifti": "t1-axial.nii.gz",
+      "glbUnits": "m",
+      "smoothing": {
+        "method": "Anisotropic signed-distance Gaussian; kernel aligned to physical source slice normal",
+        "throughSliceSigmaMm": 3.5,
+        "inPlaneSigmaMm": 1.25,
+        "surfaceDisplacementFromPreviousMm": {
+          "method": "All vertices in both directions to closest surface triangle; symmetric vertex-sampled distance, not a certified continuous Hausdorff bound",
+          "verticesCompared": 120000,
+          "p50": 0.2659,
+          "p95": 0.8024,
+          "max": 4.7164
+        },
+        "volumeChangeFromPreviousPercent": -0.446
+      },
+      "surfaceFinish": {
+        "method": "Taubin nonshrinking smoothing of the previous published surface",
+        "iterations": 100,
+        "lambda": 0.5,
+        "nu": 0.53,
+        "surfaceDistanceFromPreviousMm": {
+          "method": "All vertices in both directions to closest surface triangle; symmetric vertex-sampled distance, not a certified continuous Hausdorff bound",
+          "verticesCompared": 120004,
+          "p50": 0.0497,
+          "p95": 0.152,
+          "max": 0.5429
+        },
+        "volumeChangeFromPreviousPercent": 0.114,
+        "sourceSha256": "cac2394b769e1fb5aecef81b5f57258ff2b8f792203d991526ecc15a85b7e494",
+        "noNewAnatomicalDetail": true
+      }
+    },
+    "head": {
+      "file": "head.stl",
+      "glb": "head.glb",
+      "units": "mm",
+      "triangles": 120000,
+      "vertices": 60002,
+      "watertight": true,
+      "windingConsistent": true,
+      "components": 1,
+      "dimensionsMm": [
+        171.174,
+        207.259,
+        224.881
+      ],
+      "boundsMm": [
+        [
+          -86.041,
+          -101.986,
+          -139.837
+        ],
+        [
+          85.132,
+          105.272,
+          85.043
+        ]
+      ],
+      "volumeMl": 4632.244,
+      "bytes": 6000084,
+      "sourceSeries": "t1-sagittal",
+      "label": "Head / scalp surface",
+      "method": "T1 intensity threshold (180 source intensity), connected-component cleanup, small morphological closing, cross-sectional hole filling and mild surface smoothing. Refined surface: physical signed-distance smoothing with 3.5 mm Gaussian sigma along the acquisition slice normal and 1.25 mm in-plane, then the zero isosurface; no template anatomy or global rescaling.",
+      "limitations": "Outer soft tissue within the acquired field of view. Cropped surfaces are closed for printing. No skull-bone segmentation; facial detail and ears are approximate, and neck/base coverage is limited. Smoothing reduces slice steps and also suppresses small measured details; anatomical accuracy has not been clinically validated.",
+      "glbUnits": "m",
+      "smoothing": {
+        "method": "Anisotropic signed-distance Gaussian; kernel aligned to physical source slice normal",
+        "throughSliceSigmaMm": 3.5,
+        "inPlaneSigmaMm": 1.25,
+        "surfaceDisplacementFromPreviousMm": {
+          "method": "All vertices in both directions to closest surface triangle; symmetric vertex-sampled distance, not a certified continuous Hausdorff bound",
+          "verticesCompared": 120004,
+          "p50": 0.0868,
+          "p95": 0.3091,
+          "max": 1.4483
+        },
+        "volumeChangeFromPreviousPercent": -0.114
+      }
+    }
+  },
+  "limitations": [
+    "Source anatomical slices are 5 mm thick with approximately 1.5 mm gaps; interpolated views and meshes do not add measured detail.",
+    "Brain extraction is automated and unvalidated for clinical or anatomical measurement.",
+    "Head mesh represents the outer soft-tissue surface, not segmented skull bone.",
+    "Facial anatomy is retained at the owner\u2019s explicit request and may identify them."
+  ],
+  "centerWorldRAS": [
+    -2.17477,
+    52.96148,
+    -1.443
+  ],
+  "brainMask": {
+    "file": "brain-mask.raw.gz",
+    "series": "t1-axial",
+    "description": "Grid centers inside the final watertight brain STL; uint8 0/1, exact unchanged t1-axial RAS browser grid, x fastest; no lobe labels",
+    "method": "X-ray intersection parity at voxel centers, with independent point-in-solid spot check",
+    "dims": [
+      221,
+      241,
+      197
+    ],
+    "spacing": [
+      1.25,
+      1.25,
+      1.25
+    ],
+    "origin": [
+      -136.875,
+      -138.75,
+      -135.0
+    ]
+  },
+  "downloads": {
+    "dicom": "deidentified-dicom.zip",
+    "privacyReport": "deidentification-report.json"
+  },
+  "meshRevision": "smooth-finish-v3"
+}

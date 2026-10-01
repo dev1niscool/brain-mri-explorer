@@ -1,0 +1,319 @@
+{
+  "version": 1,
+  "brainFile": "brain.stl",
+  "headFile": "head.stl",
+  "standFile": "brain-display-stand.stl",
+  "leftFile": "brain-left-flat.stl",
+  "rightFile": "brain-right-flat.stl",
+  "kitFile": "brain-display-kit.zip",
+  "units": "mm",
+  "coordinateSystem": "Brain-centered RAS for whole brain, head and stand. Split pieces are oriented flat-side-down; their inverse assembly transforms are recorded below.",
+  "brain": {
+    "file": "brain.stl",
+    "sha256": "743999d595274effae2303432dc6b078cf536fa5a068a4527468538efdc11c60",
+    "dimensionsMm": [
+      142.46131134033203,
+      164.79084014892578,
+      131.31110382080078
+    ],
+    "faces": 120000,
+    "watertight": true,
+    "windingConsistent": true,
+    "components": 1,
+    "volumeCubicMm": 1458945.3310406227,
+    "minZMm": -65.24989318847656
+  },
+  "head": {
+    "file": "head.stl",
+    "sha256": "ce60840b295566c34689cb59448153e89ab0512ab55d60c92d86d01a0ca17ed4",
+    "dimensionsMm": [
+      171.1735382080078,
+      207.25855255126953,
+      224.88064575195312
+    ],
+    "faces": 120000,
+    "watertight": true,
+    "windingConsistent": true,
+    "components": 1,
+    "volumeCubicMm": 4632243.886618978,
+    "minZMm": -139.8372344970703
+  },
+  "stand": {
+    "version": 1,
+    "standFile": "brain-display-stand.stl",
+    "sourceBrainFile": "brain.stl",
+    "sourceBrainSha256": "743999d595274effae2303432dc6b078cf536fa5a068a4527468538efdc11c60",
+    "coordinateSystem": "Centered RAS millimetres, shared with the source brain STL.",
+    "assemblyTransform": {
+      "translationMm": [
+        0,
+        0,
+        0
+      ],
+      "rotationDegrees": [
+        0,
+        0,
+        0
+      ],
+      "scale": 1
+    },
+    "printTranslationMm": [
+      0,
+      0,
+      83.24989318847656
+    ],
+    "dimensionsMm": [
+      162.46131134033203,
+      203.79084014892578,
+      35.02595138549805
+    ],
+    "boundsMm": [
+      [
+        -81.15419006347656,
+        -91.56949615478516,
+        -83.24989318847656
+      ],
+      [
+        81.30712127685547,
+        112.22134399414062,
+        -48.223941802978516
+      ]
+    ],
+    "topology": {
+      "watertight": true,
+      "windingConsistent": true,
+      "components": 1,
+      "faces": 8240,
+      "volumeCubicMm": 282254.4014077348
+    },
+    "nominalClearanceMm": 0.4,
+    "brainIntersectionCubicMm": 0.0,
+    "supports": [
+      {
+        "centerXYMm": [
+          -35.538862228393555,
+          17.95291633605957
+        ],
+        "topRadiiMm": [
+          16.383050804138183,
+          14.83117561340332
+        ],
+        "topHeightRangeMm": [
+          -55.474139603698546,
+          -48.22394270116847
+        ],
+        "sampledMinimumClearanceMm": 0.3999999999999986,
+        "sampledMedianClearanceMm": 0.9128864243926884,
+        "closestContactCenterXYMm": [
+          -28.168362032751627,
+          6.501881129061436
+        ],
+        "fittedAreaWithin1mmSquareMm": 869.3874033270159,
+        "fitSamples": 5448
+      },
+      {
+        "centerXYMm": [
+          35.69179344177246,
+          17.95291633605957
+        ],
+        "topRadiiMm": [
+          16.383050804138183,
+          14.83117561340332
+        ],
+        "topHeightRangeMm": [
+          -58.95795798338389,
+          -51.15141529452019
+        ],
+        "sampledMinimumClearanceMm": 0.3999999999999986,
+        "sampledMedianClearanceMm": 0.8351138532809017,
+        "closestContactCenterXYMm": [
+          28.849944114888064,
+          30.29533217110287
+        ],
+        "fittedAreaWithin1mmSquareMm": 845.8044586277765,
+        "fitSamples": 5448
+      },
+      {
+        "centerXYMm": [
+          0.07646560668945312,
+          -43.01969451904297
+        ],
+        "topRadiiMm": [
+          20.656890144348143,
+          14.83117561340332
+        ],
+        "topHeightRangeMm": [
+          -66.02893891078796,
+          -60.81841591190356
+        ],
+        "sampledMinimumClearanceMm": 0.3999999999999986,
+        "sampledMedianClearanceMm": 0.7868842418606334,
+        "closestContactCenterXYMm": [
+          -10.696173996742269,
+          -31.574874655466612
+        ],
+        "fittedAreaWithin1mmSquareMm": 765.4554214266329,
+        "fitSamples": 6768
+      }
+    ],
+    "stabilityEstimate": {
+      "brainCenterOfMassMm": [
+        0.42828811947477935,
+        -4.726553074104566,
+        1.338906038255173
+      ],
+      "brainCenterOfMassInsideSupportTriangle": true,
+      "brainCenterOfMassSupportTriangleMarginMm": 5.086193840669884,
+      "sameDensityAssemblyCenterOfMassMm": [
+        0.3240569229395079,
+        -1.408396031542706,
+        -11.344275520631408
+      ],
+      "assemblyBaseEdgeMarginMm": 80.98306435391596,
+      "rigidAssemblyTipAngleDegrees": 48.39782856912305,
+      "assumptions": "Uniform density for each solid. Actual infill, shell thickness, friction and seating change these values; the removable brain can move independently."
+    },
+    "printing": {
+      "orientation": "Flat base on the bed; translate stand minZ to zero. No rotation.",
+      "scale": "Print brain and stand at the same percentage. STL units are millimetres.",
+      "suggestedLayerHeightMm": 0.2,
+      "supportMaterial": "The stand has upright or sloped walls and should not need generated supports. Inspect in your slicer.",
+      "caption": "DEVIN'S BRAIN / PROOF THAT I HAVE ONE.",
+      "embossedReliefMm": 0.55
+    },
+    "fittingNotes": [
+      "Three broad caps follow the lower surface of this exact source mesh. Tall areas are capped so the supports do not climb into fissures.",
+      "The brain lifts vertically off the stand; no brain drilling, sockets or attachment are required.",
+      "A small nominal clearance allows for printing variation. Check seating gently; sand contact high spots or add thin felt where needed.",
+      "Keep the assembled display away from edges. Fit and stability are geometric estimates, not a tested or certified physical product.",
+      "Regenerate the stand after changing the brain shape; the recorded source hash identifies the fitted model."
+    ],
+    "splitPieces": [
+      {
+        "side": "left",
+        "file": "brain-left-flat.stl",
+        "cutPlane": "RAS x=0 mm",
+        "dimensionsMm": [
+          130.64939880371094,
+          164.79084014892578,
+          71.15419006347656
+        ],
+        "faces": 63686,
+        "volumeCubicMm": 722188.5915106764,
+        "watertight": true,
+        "components": 1,
+        "assemblyTransform": {
+          "translationMm": [
+            3.957930414074779e-15,
+            0.0,
+            -2.423533406422318e-31
+          ],
+          "rotationDegrees": [
+            0,
+            -90,
+            0
+          ],
+          "scale": 1
+        },
+        "assemblyTransformMatrixRowMajor": [
+          [
+            6.123233995736766e-17,
+            -0.0,
+            -1.0,
+            3.957930414074779e-15
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            6.123233995736766e-17,
+            -2.423533406422318e-31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "printRotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "printOrientation": "Already oriented with its flat sagittal cut on z=0. Keep the same scale as the stand."
+      },
+      {
+        "side": "right",
+        "file": "brain-right-flat.stl",
+        "cutPlane": "RAS x=0 mm",
+        "dimensionsMm": [
+          130.6991195678711,
+          162.76657104492188,
+          71.30712127685547
+        ],
+        "faces": 60246,
+        "volumeCubicMm": 736756.7395298298,
+        "watertight": true,
+        "components": 1,
+        "assemblyTransform": {
+          "translationMm": [
+            -3.957930414074779e-15,
+            0.0,
+            -2.423533406422318e-31
+          ],
+          "rotationDegrees": [
+            0,
+            90,
+            0
+          ],
+          "scale": 1
+        },
+        "assemblyTransformMatrixRowMajor": [
+          [
+            6.123233995736766e-17,
+            0.0,
+            1.0,
+            -3.957930414074779e-15
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1.0,
+            -0.0,
+            6.123233995736766e-17,
+            -2.423533406422318e-31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "printRotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "printOrientation": "Already oriented with its flat sagittal cut on z=0. Keep the same scale as the stand."
+      }
+    ],
+    "splitNotes": [
+      "A straight geometric midline cut, with flat caps; this is not an anatomical separation of named structures.",
+      "The two flat surfaces can be joined after printing. No magnets, alignment pins or glue allowance are built in.",
+      "The complete brain remains the fitted stand reference. Join the halves before displaying the brain on the stand."
+    ],
+    "splitVolumeErrorCubicMm": 1.1641532182693481e-07
+  },
+  "note": "Print the brain and stand at the same scale. Use the whole brain OR the two joined flat pieces. Fit has been checked digitally; no physical test print has been made."
+}

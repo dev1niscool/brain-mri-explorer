@@ -1,0 +1,56 @@
+.print-studio { display:grid;grid-template-columns:minmax(0,1fr) 280px;overflow:hidden;margin-bottom:24px; }
+.print-stage-view { position:relative;min-width:0;background:radial-gradient(ellipse at 47% 45%,#24415475,transparent 68%),#0d1928; }
+.print-stage-toolbar { position:absolute;z-index:2;top:20px;left:22px;right:22px;display:flex;justify-content:space-between;gap:12px;align-items:center; }
+.print-stage-toolbar span { color:#a6c8be;font:9px ui-monospace,monospace;letter-spacing:1.4px; }
+.print-stage-toolbar button { color:#cadde9;font-size:11px;border:1px solid #7495b438;padding:8px 12px;border-radius:10px;background:#1b3044bb; }
+[data-print-canvas] { height:550px;width:100%;outline-offset:-5px; }
+[data-print-canvas] canvas { display:block;width:100%;height:100%;touch-action:none; }
+.print-stage-foot { position:absolute;bottom:21px;left:24px;right:24px;display:flex;justify-content:space-between;gap:12px;color:#a8bccd;font-size:10px;pointer-events:none; }
+.print-choice-panel { padding:29px 23px;background:#182b3fcc;border-left:1px solid #7694b12c; }
+.print-choice-panel h2 { font-size:21px;font-weight:520;letter-spacing:-.5px;margin:0 0 22px; }
+.print-object-options { display:grid;gap:9px;margin-bottom:16px; }
+.print-object-options button { display:flex;gap:12px;align-items:center;text-align:left;padding:14px;border:1px solid #7398b331;border-radius:13px;background:#10223566;color:#b6cbdc;font-size:12px; }
+.print-object-options button span { font:9px ui-monospace,monospace;color:#8da8ba; }
+.print-object-options button[aria-pressed=true] { color:#e1efea;border-color:#9ac7b375;background:linear-gradient(110deg,#35564c8c,#29435670);box-shadow:inset 0 1px 0 #b9e1d123; }
+.print-object-options button[aria-pressed=true] span { color:#bedbce; }
+.print-other-objects { margin:0 0 20px;font-size:11px;color:#b1c8d7; }
+.print-other-objects summary { cursor:pointer;padding:5px 0; }
+.print-other-objects .print-object-options { margin:10px 0 0;gap:6px; }
+.print-other-objects button { font-size:11px;padding:10px 13px; }
+.print-choice-panel p { font-size:12px;line-height:1.8;color:#adbed0; }
+.print-choice-panel .control-label { display:block;margin-top:25px;margin-bottom:12px;font-size:10px; }
+.print-camera-options { display:flex;flex-wrap:wrap;gap:6px; }
+.print-camera-options button { padding:9px 10px;border:1px solid #7695ae35;background:#16293b;color:#c1d3df;border-radius:9px;font-size:11px; }
+[data-print-status] { position:absolute;inset:70px 24px;display:grid;place-items:center;text-align:center;color:#adc5d8;font-size:13px;pointer-events:none; }
+[data-print-status][hidden] { display:none; }
+.print-downloads { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:0 0 23px; }
+.print-downloads .print-card { padding:23px; }
+.print-downloads .print-card-featured { border-color:#8dbdaa70;background:linear-gradient(140deg,#28483f85,#142439d9); }
+.print-downloads .print-card h2 { font-size:20px;margin:20px 0 11px;letter-spacing:-.5px; }
+.print-downloads .print-card p { min-height:88px;font-size:12px; }
+.print-downloads .mesh-stats { min-height:51px;font-size:10px; }
+.print-downloads .button { font-size:12px; }
+.print-downloads .secondary-download { margin-top:12px;display:inline-block;font-size:11px;color:#b8d6c9;text-underline-offset:3px; }
+.print-alternatives { border-block:1px solid #7694b12c;padding:18px 0;margin:8px 0 0;color:#b7cbdc; }
+.print-alternatives>summary { cursor:pointer;font-size:13px; }
+.print-alternatives>p { font-size:12px;line-height:1.8;margin:16px 0; }
+.print-downloads-secondary { grid-template-columns:repeat(2,minmax(0,1fr));margin:16px 0 4px; }
+.print-downloads-secondary .print-card p { min-height:0; }
+.print-scan-note { display:grid;grid-template-columns:1fr 1.35fr;gap:40px;padding:30px;margin-top:22px; }
+.print-scan-note h2 { font-size:23px;letter-spacing:-.6px;margin:0 0 14px; }
+.print-scan-note p { font-size:12px;line-height:1.85;color:#adbed0; }
+.print-scan-note .measurement { font:12px ui-monospace,monospace;color:#b2d3c5; }
+.print-scan-note a { color:#bdcfe2;text-underline-offset:3px; }
+.print-instructions { display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:25px 4px; }
+.print-instructions h3 { font-size:14px;margin:0 0 10px;font-weight:550;color:#dce9f0; }
+.print-instructions h3 span { color:#92baad;font:10px ui-monospace,monospace;margin-right:10px; }
+.print-instructions p { color:#a5b9ce;font-size:12px;line-height:1.8;margin:0; }
+.print-reference-links { display:flex;gap:18px;flex-wrap:wrap;margin-top:20px;font-size:11px; }
+@media(max-width:950px){.print-studio{grid-template-columns:minmax(0,1fr) 240px}.print-choice-panel{padding:24px 19px}.print-downloads{gap:12px}.print-downloads .print-card{padding:18px}.print-downloads .button{font-size:11px;padding:12px 9px}}
+@media(max-width:700px){.print-studio{grid-template-columns:1fr}.print-choice-panel{border-left:0;border-top:1px solid #7694b12c}.print-choice-panel h2{margin-bottom:17px}.print-object-options{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-bottom:16px}.print-object-options button{font-size:10px;padding:12px 8px;justify-content:center}.print-object-options button span{display:none}.print-other-objects .print-object-options{grid-template-columns:1fr}.print-choice-panel .control-label{margin-top:18px}[data-print-canvas]{height:410px}.print-stage-toolbar{left:18px;right:18px;top:16px}.print-stage-foot{left:18px;right:18px;font-size:9px;flex-direction:column;gap:5px}.print-downloads{grid-template-columns:1fr}.print-downloads .print-card{padding:23px}.print-downloads .print-card p{min-height:auto}.print-downloads .mesh-stats{min-height:0}.print-downloads .button{font-size:12px}.print-scan-note{grid-template-columns:1fr;gap:12px;padding:25px}.print-instructions{grid-template-columns:1fr;gap:22px;padding:18px 6px}}
+
+.split-downloads { margin-top:16px;font-size:11px;color:#b7c8d7; }
+.split-downloads summary { cursor:pointer; }
+.print-downloads .split-downloads p { font-size:11px;min-height:0;margin:12px 0 0; }
+.split-downloads a+a { margin-left:17px; }
+.print-scan-note summary { font-size:12px;color:#d0e0e9;cursor:pointer; }

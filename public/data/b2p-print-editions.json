@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "source": {
+    "file": "b2p-brain.mz3",
+    "sha256": "31bc0f1d884751ede46abaa04bb962b02a5efd3cad2bf506db3ef94026ee2d91",
+    "provenanceFile": "b2p-result.json",
+    "triangles": 96828,
+    "vertices": 48334,
+    "watertight": true,
+    "windingConsistent": true,
+    "positiveVolume": true,
+    "connectedComponents": 1,
+    "eulerNumber": -80,
+    "boundsMm": [
+      [
+        -72.58555603027344,
+        -26.60378074645996,
+        -59.165130615234375
+      ],
+      [
+        68.44561004638672,
+        135.09439086914062,
+        62.774208068847656
+      ]
+    ],
+    "dimensionsMm": [
+      141.03116607666016,
+      161.6981716156006,
+      121.93933868408203
+    ],
+    "enclosedVolumeMl": 1170.0112747783169
+  },
+  "coordinateSystem": "Unshifted NIfTI RAS world millimeters, shared with t1-axial.nii.gz and b2p-conformed.nii.gz",
+  "coordinateTransform": {
+    "conformedVoxelToRAS": [
+      -1.0,
+      0.0,
+      0.0,
+      126.908203125,
+      0.0,
+      0.0,
+      1.0,
+      -63.21519470214844,
+      0.0,
+      -1.0,
+      0.0,
+      117.14127349853516,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "matrixOrder": "row-major 4x4",
+    "legacyExploreCenterWorldRAS": [
+      -2.17477,
+      52.96148,
+      -1.443
+    ],
+    "legacyExploreRule": "Subtract this center from RAS mesh vertices before applying the existing display rotation"
+  },
+  "defaultEdition": "full",
+  "method": {
+    "compactAlgorithm": "PyMeshLab topology-preserving quadric edge-collapse decimation",
+    "settings": {
+      "targetfacenum": 40000,
+      "preservetopology": true,
+      "preservenormal": true,
+      "preserveboundary": true,
+      "optimalplacement": true,
+      "qualitythr": 0.3,
+      "autoclean": true
+    },
+    "pymeshlabVersion": "2025.7.post1",
+    "trimeshVersion": "5.1.0",
+    "documentation": "https://pymeshlab.readthedocs.io/en/latest/filter_list.html#meshing-decimation-quadric-edge-collapse",
+    "noSmoothingRescalingOrHoleFilling": true
+  },
+  "editions": [
+    {
+      "id": "full",
+      "label": "Full Brain2Print mesh",
+      "file": "b2p-print-full.stl",
+      "sha256": "a6ea51484f248c4ce4c720add83adf9e4fb449c2848a867db2dc132dd02e04b6",
+      "bytes": 4841484,
+      "fileSizeLabel": "4.84 MB",
+      "triangleCountLabel": "96,828 triangles",
+      "units": "mm",
+      "triangles": 96828,
+      "vertices": 48334,
+      "watertight": true,
+      "windingConsistent": true,
+      "positiveVolume": true,
+      "connectedComponents": 1,
+      "eulerNumber": -80,
+      "boundsMm": [
+        [
+          -72.58555603027344,
+          -26.60378074645996,
+          -59.165130615234375
+        ],
+        [
+          68.44561004638672,
+          135.09439086914062,
+          62.774208068847656
+        ]
+      ],
+      "dimensionsMm": [
+        141.03116607666016,
+        161.6981716156006,
+        121.93933868408203
+      ],
+      "enclosedVolumeMl": 1170.0112747783169,
+      "triangleReductionPercent": 0.0,
+      "sourceGeometryPreservedExactly": true
+    },
+    {
+      "id": "compact",
+      "label": "Compact Brain2Print mesh",
+      "file": "b2p-print-compact.stl",
+      "sha256": "333ba4b130f73194477c7d0f1466f3c43d13566d34ae76ebd7c5f74e68cb6671",
+      "bytes": 2000084,
+      "fileSizeLabel": "2.00 MB",
+      "triangleCountLabel": "40,000 triangles",
+      "units": "mm",
+      "triangles": 40000,
+      "vertices": 19920,
+      "watertight": true,
+      "windingConsistent": true,
+      "positiveVolume": true,
+      "connectedComponents": 1,
+      "eulerNumber": -80,
+      "boundsMm": [
+        [
+          -72.59246826171875,
+          -26.62933921813965,
+          -59.165130615234375
+        ],
+        [
+          68.4209976196289,
+          135.01742553710938,
+          62.85747528076172
+        ]
+      ],
+      "dimensionsMm": [
+        141.01346588134766,
+        161.64676475524902,
+        122.0226058959961
+      ],
+      "enclosedVolumeMl": 1170.0753781929911,
+      "triangleReductionPercent": 58.68963522947907,
+      "sourceGeometryPreservedExactly": false,
+      "surfaceDeviation": {
+        "method": "Every vertex and face centroid in both directions to the nearest triangle on the other surface",
+        "interpretation": "Sampled geometric difference from the saved automated mesh; not a continuous Hausdorff bound or a measure of anatomical accuracy",
+        "samples": 205082,
+        "samplesPerDirection": [
+          59920,
+          145162
+        ],
+        "p50Mm": 0.040592499164162264,
+        "p95Mm": 0.1456677965114521,
+        "maximumSampledMm": 1.0816201760250088
+      },
+      "volumeChangePercent": 0.005478871533637353,
+      "boundsChangeMm": [
+        [
+          -0.0069122314453125,
+          -0.0255584716796875,
+          0.0
+        ],
+        [
+          -0.0246124267578125,
+          -0.07696533203125,
+          0.0832672119140625
+        ]
+      ]
+    }
+  ],
+  "notesFile": "b2p-print-notes.txt",
+  "selectionNote": "Full is the recommended default and preserves the saved mesh exactly. Optional Compact trades local geometric changes for about 59% fewer triangles; its measured changes are disclosed rather than presented as increased anatomical accuracy.",
+  "limitations": [
+    "Both files represent the same experimental automated Brain2Print segmentation; upper cortical tissue is omitted and labels can be incorrect.",
+    "Polygon reduction changes the tessellation, not the measured MRI resolution or the completeness of the segmentation.",
+    "Watertight topology does not by itself establish freedom from self-intersections, anatomical accuracy, minimum printable wall thickness or successful printing.",
+    "The older cradle and split halves were fitted to a different brain model and are not fitted accessories for these editions."
+  ],
+  "verification": {
+    "fullStlTriangleCoordinatesExactlyEqualSavedMz3": true,
+    "compactPreservesEulerNumberAndOneWatertightComponent": true,
+    "compactAcceptance": "One closed component, consistent winding, positive volume, Euler number unchanged, finite coordinates and explicit sampled surface-difference reporting. No distance threshold is treated as anatomical validation.",
+    "existingSourceModelAndVoxelFilesUnchanged": true
+  }
+}

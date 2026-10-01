@@ -1,0 +1,10 @@
+{
+  "name": "devin-brain-download-service",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test worker.test.js",
+    "deploy": "npx wrangler@4 deploy",
+    "check": "npx wrangler@4 deploy --dry-run"
+  }
+}

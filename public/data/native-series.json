@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "format": "uint8-gzip",
+  "byteOrder": "x-fastest",
+  "spatialResampling": false,
+  "coordinateOrder": "Closest RAS voxel axes; native obliquity retained",
+  "description": "Three independent acquired image stacks. Each plane is 512\u00d7512 original samples; the sequences and acquisition times differ. These are not linked orthogonal cuts of one volume.",
+  "orientationNote": "Cardinal labels describe the nearest anatomical direction. Each original acquisition plane is oblique, so these are approximate direction labels.",
+  "defaultDisplayTiltDegrees": 0,
+  "series": [
+    {
+      "id": "native-t1-axial",
+      "sourceSeries": "t1-axial",
+      "file": "native-t1-axial.raw.gz",
+      "label": "T1 \u00b7 acquired axial",
+      "sequence": "T1 FLAIR",
+      "dims": [
+        512,
+        512,
+        29
+      ],
+      "spacing": [
+        0.4687999965121461,
+        0.4688000073148025,
+        6.5000834697507
+      ],
+      "plane": {
+        "id": "axial",
+        "axis": 2,
+        "u": 0,
+        "v": 1,
+        "flipU": true,
+        "flipV": true,
+        "top": "A",
+        "bottom": "P",
+        "left": "R",
+        "right": "L"
+      },
+      "sourceSlices": 29,
+      "defaultIndex": 14,
+      "sliceThickness": 5.0,
+      "gapMm": 1.5,
+      "windowIntensity": [
+        -0.5,
+        3169.5
+      ],
+      "windowCenter": 1585.0,
+      "windowWidth": 3171.0,
+      "windowSource": "DICOM LINEAR window from the selected central native slice, applied consistently to this stack",
+      "intensityMapping": "uint8 = clip((native scalar value - low) / (high - low) \u00d7255,0,255), truncated toward zero; low=center-0.5-(width-1)/2 and high=center-0.5+(width-1)/2",
+      "directionCosinesRAS": [
+        [
+          0.99232822,
+          0.09594299,
+          0.077999
+        ],
+        [
+          -0.11118572,
+          0.96834038,
+          0.22353558
+        ],
+        [
+          -0.05405968,
+          -0.23046011,
+          0.97156986
+        ]
+      ],
+      "directionCosinesConvention": "Columns correspond to array X,Y,Z axes; rows are R,A,S components",
+      "inPlanePixelSpacingMm": [
+        0.4687999965121461,
+        0.4688000073148025
+      ],
+      "defaultDisplayTiltDegrees": 0,
+      "bytes": 2722516
+    },
+    {
+      "id": "native-flair-coronal",
+      "sourceSeries": "flair-coronal",
+      "file": "native-flair-coronal.raw.gz",
+      "label": "FLAIR \u00b7 acquired coronal",
+      "sequence": "T2 FLAIR",
+      "dims": [
+        512,
+        34,
+        512
+      ],
+      "spacing": [
+        0.4688000146827374,
+        6.500005611952964,
+        0.468800009862171
+      ],
+      "plane": {
+        "id": "coronal",
+        "axis": 1,
+        "u": 0,
+        "v": 2,
+        "flipU": true,
+        "flipV": true,
+        "top": "S",
+        "bottom": "I",
+        "left": "R",
+        "right": "L"
+      },
+      "sourceSlices": 34,
+      "defaultIndex": 17,
+      "sliceThickness": 5.0,
+      "gapMm": 1.5,
+      "windowIntensity": [
+        52.5,
+        1022.5
+      ],
+      "windowCenter": 538.0,
+      "windowWidth": 971.0,
+      "windowSource": "DICOM LINEAR window from the selected central native slice, applied consistently to this stack",
+      "intensityMapping": "uint8 = clip((native scalar value - low) / (high - low) \u00d7255,0,255), truncated toward zero; low=center-0.5-(width-1)/2 and high=center-0.5+(width-1)/2",
+      "directionCosinesRAS": [
+        [
+          0.99659643,
+          0.06969225,
+          0.04398168
+        ],
+        [
+          -0.077274,
+          0.97594683,
+          0.20385839
+        ],
+        [
+          -0.0287103,
+          -0.20656905,
+          0.97801195
+        ]
+      ],
+      "directionCosinesConvention": "Columns correspond to array X,Y,Z axes; rows are R,A,S components",
+      "inPlanePixelSpacingMm": [
+        0.4688000146827374,
+        0.468800009862171
+      ],
+      "defaultDisplayTiltDegrees": 0,
+      "bytes": 4275665
+    },
+    {
+      "id": "native-t1-sagittal",
+      "sourceSeries": "t1-sagittal",
+      "file": "native-t1-sagittal.raw.gz",
+      "label": "T1 \u00b7 acquired sagittal",
+      "sequence": "T1 FLAIR",
+      "dims": [
+        26,
+        512,
+        512
+      ],
+      "spacing": [
+        6.500029719409179,
+        0.46880000362850444,
+        0.4688000137363765
+      ],
+      "plane": {
+        "id": "sagittal",
+        "axis": 0,
+        "u": 1,
+        "v": 2,
+        "flipU": true,
+        "flipV": true,
+        "top": "S",
+        "bottom": "I",
+        "left": "A",
+        "right": "P"
+      },
+      "sourceSlices": 26,
+      "defaultIndex": 13,
+      "sliceThickness": 5.0,
+      "gapMm": 1.5,
+      "windowIntensity": [
+        1.5,
+        3105.5
+      ],
+      "windowCenter": 1554.0,
+      "windowWidth": 3105.0,
+      "windowSource": "DICOM LINEAR window from the selected central native slice, applied consistently to this stack",
+      "intensityMapping": "uint8 = clip((native scalar value - low) / (high - low) \u00d7255,0,255), truncated toward zero; low=center-0.5-(width-1)/2 and high=center-0.5+(width-1)/2",
+      "directionCosinesRAS": [
+        [
+          0.99271856,
+          0.08712997,
+          0.08317915
+        ],
+        [
+          -0.10292261,
+          0.97229987,
+          0.20985736
+        ],
+        [
+          -0.06258433,
+          -0.21689013,
+          0.97418741
+        ]
+      ],
+      "directionCosinesConvention": "Columns correspond to array X,Y,Z axes; rows are R,A,S components",
+      "inPlanePixelSpacingMm": [
+        0.46880000362850444,
+        0.4688000137363765
+      ],
+      "defaultDisplayTiltDegrees": 0,
+      "bytes": 3976799
+    }
+  ]
+}

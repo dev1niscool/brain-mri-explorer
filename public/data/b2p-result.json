@@ -1,0 +1,555 @@
+{
+  "upstreamRepository": "https://github.com/niivue/brain2print",
+  "upstreamCommit": "efd4adaca25f07384bb088de27f93bc6528cd999",
+  "source": {
+    "file": "t1-axial.nii.gz",
+    "sequence": "Axial T1 FLAIR",
+    "sha256": "3ce918fdba00ade86dba2e07a6bb283d260e04b360cac0977575c74260ca65c4",
+    "bytes": 9530270,
+    "nativeDimensions": [
+      512,
+      512,
+      29
+    ],
+    "nativeSpacingMm": [
+      0.4687999965121461,
+      0.4688000073148025,
+      6.5000834697507
+    ],
+    "sliceThicknessMm": 5,
+    "centerSpacingMm": 6.500083278791513,
+    "metadata": "Metadata-minimized source used for the historical run; protected original download"
+  },
+  "selectedModel": {
+    "id": 6,
+    "upstreamIndex": 5,
+    "name": "Subcortical + GWM (Low Mem, Faster)",
+    "path": "models/model18cls/model.json",
+    "labels": {
+      "0": "Unknown",
+      "1": "Cerebral-White-Matter",
+      "2": "Cerebral-Cortex",
+      "3": "Lateral-Ventricle",
+      "4": "Inferior-Lateral-Ventricle",
+      "5": "Cerebellum-White-Matter",
+      "6": "Cerebellum-Cortex",
+      "7": "Thalamus",
+      "8": "Caudate",
+      "9": "Putamen",
+      "10": "Pallidum",
+      "11": "3rd-Ventricle",
+      "12": "4th-Ventricle",
+      "13": "Brain-Stem",
+      "14": "Hippocampus",
+      "15": "Amygdala",
+      "16": "Accumbens-area",
+      "17": "VentralDC"
+    },
+    "files": {
+      "model.json": {
+        "sha256": "57346ac8b66ebe8d92296b1cf9988143be4949b6ef9695a790ef3d7fba3fb81b",
+        "bytes": 28638
+      },
+      "model.bin": {
+        "sha256": "725096439f64ece1ca45ec3c5115c9fa6004f6538cac3032b85966d3772b605e",
+        "bytes": 385632
+      },
+      "labels.json": {
+        "sha256": "70e8e812435a994a6b880dea1439a8f0fb45e5065233929e7f9b7475369e9a3e",
+        "bytes": 443
+      },
+      "colormap.json": {
+        "sha256": "10ebff5980dd2afe1a1407dd951d1258dfc95fec51641bab9b4a9b88d76808c5",
+        "bytes": 608
+      }
+    }
+  },
+  "pipeline": {
+    "inference": "Actual upstream brainchop-webworker.js TensorFlow.js4.22 WebGL",
+    "conformation": "Upstream NiiVue conform(volume,false,true,false,true), to model input; interpolation is not additional measured resolution",
+    "mesh": "Actual upstream antiAliasCuberille(noClosing:true), repair(maximumHoleArea:50), keepLargestComponent, smoothRemesh, repair",
+    "capture": "Local browser outputs only, via localhost QA endpoint; no server inference",
+    "meshInputPreparation": "Binary union of all nonzero predicted labels, before the upstream ITK-Wasm meshing steps",
+    "adaptation": "Embedded interface and fixed public input; explicit binary foreground conversion for meshing"
+  },
+  "libraries": {
+    "@niivue/niimath": "^1.0.1",
+    "@itk-wasm/cuberille": "^0.2.0",
+    "@itk-wasm/mesh-filters": "^1.7.0",
+    "@niivue/cbor-loader": "^1.2.1",
+    "@niivue/niivue": "^0.62.0",
+    "@tensorflow/tfjs": "^4.22.0",
+    "gl-matrix": "^3.4.3"
+  },
+  "limitations": [
+    "T1-FLAIR with 5 mm slice thickness and 6.5 mm centers differs from popular high-resolution T1 training inputs.",
+    "Automated labels may omit or misclassify visible anatomy; no clinical validation or diagnosis.",
+    "Conformation and smoothing do not recover missing measured detail.",
+    "Visual comparison found omissions in upper cortical tissue. This experimental reconstruction is incomplete.",
+    "Public viewer MRI intensities are quantized and label overlays use a 1.25 mm display grid; exact original NIfTI files require the download password."
+  ],
+  "status": "Actual Brain2Print browser run completed and captured locally",
+  "result": {
+    "conformedFile": "display-b2p-conformed.nii.gz",
+    "segmentationFile": "display-b2p-segmentation.nii.gz",
+    "meshFile": "b2p-brain.mz3",
+    "generatedBy": "Actual upstream browser worker + ITK-Wasm pipeline, not HD-BET",
+    "mesh": {
+      "vertices": 48334,
+      "triangles": 96828,
+      "units": "mm",
+      "boundsMm": [
+        [
+          -72.586,
+          -26.604,
+          -59.165
+        ],
+        [
+          68.446,
+          135.094,
+          62.774
+        ]
+      ],
+      "dimensionsMm": [
+        141.031,
+        161.698,
+        121.939
+      ],
+      "watertight": true,
+      "windingConsistent": true,
+      "positiveVolume": true,
+      "connectedComponents": 1,
+      "predictedLabelCenterBoundsMm": [
+        [
+          -72.092,
+          -26.215,
+          -59.859
+        ],
+        [
+          67.908,
+          134.785,
+          63.141
+        ]
+      ],
+      "boundsDifferenceFromLabelCentersMm": [
+        [
+          -0.494,
+          -0.389,
+          0.694
+        ],
+        [
+          0.537,
+          0.31,
+          -0.367
+        ]
+      ],
+      "enclosedVolumeMm3": 1170011.275,
+      "inputIsBinaryLabelUnion": true,
+      "reviewStatus": "Technical geometry and visual overlay review completed; segmentation remains experimental and incomplete"
+    },
+    "provisional": false,
+    "files": {
+      "display-b2p-conformed.nii.gz": {
+        "sha256": "7e157c1109a91aafbeff720c41d31080f6ddb6d042d1811363b14699c1b36672",
+        "bytes": 2592378,
+        "dimensions": [
+          256,
+          256,
+          256
+        ],
+        "spacingMm": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "affine": [
+          -1.0,
+          0.0,
+          0.0,
+          126.908203125,
+          0.0,
+          0.0,
+          1.0,
+          -63.21519470214844,
+          0.0,
+          -1.0,
+          0.0,
+          117.14127349853516,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "dtype": "uint8",
+        "voxelOffset": 352,
+        "niftiDatatypeCode": 2,
+        "sformCode": 2,
+        "qformCode": 0
+      },
+      "display-b2p-segmentation.nii.gz": {
+        "sha256": "1d4b42a28c647288e68729f7ba5fb4e520dff2a338bd401c39bf8e4b5776b19f",
+        "bytes": 111886,
+        "dimensions": [
+          205,
+          205,
+          205
+        ],
+        "spacingMm": [
+          1.25,
+          1.25,
+          1.25
+        ],
+        "affine": [
+          -1.25,
+          0.0,
+          0.0,
+          126.908203125,
+          0.0,
+          0.0,
+          1.25,
+          -63.21519470214844,
+          0.0,
+          -1.25,
+          0.0,
+          117.14127349853516,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "dtype": "uint8",
+        "voxelOffset": 352,
+        "niftiDatatypeCode": 2,
+        "sformCode": 2,
+        "qformCode": 0
+      },
+      "b2p-brain.mz3": {
+        "sha256": "31bc0f1d884751ede46abaa04bb962b02a5efd3cad2bf506db3ef94026ee2d91",
+        "bytes": 1741960
+      }
+    },
+    "originalInferenceGrid": {
+      "dimensions": [
+        256,
+        256,
+        256
+      ],
+      "spacingMm": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "orientation": [
+        "L",
+        "I",
+        "A"
+      ],
+      "labelCounts": {
+        "0": 15626598,
+        "1": 464858,
+        "2": 479758,
+        "3": 19858,
+        "4": 825,
+        "5": 21872,
+        "6": 86537,
+        "7": 14650,
+        "8": 7226,
+        "9": 10563,
+        "10": 2694,
+        "11": 618,
+        "12": 2186,
+        "13": 22248,
+        "14": 5972,
+        "15": 3088,
+        "16": 899,
+        "17": 6766
+      }
+    },
+    "originalFiles": {
+      "b2p-conformed.nii.gz": {
+        "sha256": "87a4284527ce956f730b636f046df773584e38573ab6af76612b9232c9714fe4",
+        "bytes": 3955722
+      },
+      "b2p-segmentation.nii.gz": {
+        "sha256": "92b11da7d3df24065bb917026978858209e5c35e4162eb62e94fc75f3cc02db9",
+        "bytes": 357571
+      },
+      "b2p-brain.mz3": {
+        "sha256": "31bc0f1d884751ede46abaa04bb962b02a5efd3cad2bf506db3ef94026ee2d91",
+        "bytes": 1741960
+      }
+    }
+  },
+  "browserRun": {
+    "modelId": 6,
+    "backend": "TensorFlow.js WebGL",
+    "segmentationSeconds": 32.69020000000298,
+    "meshSettings": {
+      "smoothing": 3.0,
+      "detail": 25.0
+    },
+    "meshSeconds": 9.0
+  },
+  "verificationModelComparison": {
+    "selectedModelId": 6,
+    "otherActualRunsCompared": [
+      3,
+      1
+    ],
+    "selectionReason": "Improved visible anterior and cerebellar label coverage in this scan; no accuracy reference or clinical validation",
+    "observedLimitations": [
+      "Upper cortical tissue is incompletely labeled.",
+      "Individual tissue and structure labels can be misplaced or missing."
+    ],
+    "meshAdaptationReason": "The multiclass numeric image produced a partial meshing result; binary union includes every nonzero predicted class before the unchanged ITK-Wasm stages."
+  },
+  "capturedRunProvenanceSha256": "331f12d08800917156905e5354670851c31710ba39f4da6dfd293e069b9aaa2a",
+  "verification": {
+    "captureMeshByteIdentical": true,
+    "niftiPixelsAndAffinesPreserved": true,
+    "freshNiftiHeaders": true,
+    "noNiftiExtensionsOrIdentifyingTextFields": true,
+    "noIndependentInferenceSubstitution": true,
+    "scope": "These historical capture checks refer to originalFiles and originalInferenceGrid, not the public display derivatives."
+  },
+  "publicDisplaySource": {
+    "file": "display-t1-axial.nii.gz",
+    "sha256": "3a85f2f8e605169e6e30a2a4ec4c16456740a134f8ad45d7cf0988c275d36126",
+    "description": "Public 8-bit native-grid input used for new browser reruns; results may differ from the saved original-source run"
+  },
+  "publicDisplay": {
+    "conformed": {
+      "sha256": "7e157c1109a91aafbeff720c41d31080f6ddb6d042d1811363b14699c1b36672",
+      "bytes": 2592378,
+      "dimensions": [
+        256,
+        256,
+        256
+      ],
+      "spacingMm": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "affine": [
+        -1.0,
+        0.0,
+        0.0,
+        126.908203125,
+        0.0,
+        0.0,
+        1.0,
+        -63.21519470214844,
+        0.0,
+        -1.0,
+        0.0,
+        117.14127349853516,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "dtype": "uint8",
+      "voxelOffset": 352,
+      "niftiDatatypeCode": 2,
+      "sformCode": 2,
+      "qformCode": 0,
+      "sourceFile": "b2p-conformed.nii.gz",
+      "sourceSha256": "87a4284527ce956f730b636f046df773584e38573ab6af76612b9232c9714fe4",
+      "intensityLevels": 64,
+      "maximumByteError": 2,
+      "dimensionsAndAffineIdentical": true
+    },
+    "segmentation": {
+      "sha256": "1d4b42a28c647288e68729f7ba5fb4e520dff2a338bd401c39bf8e4b5776b19f",
+      "bytes": 111886,
+      "dimensions": [
+        205,
+        205,
+        205
+      ],
+      "spacingMm": [
+        1.25,
+        1.25,
+        1.25
+      ],
+      "affine": [
+        -1.25,
+        0.0,
+        0.0,
+        126.908203125,
+        0.0,
+        0.0,
+        1.25,
+        -63.21519470214844,
+        0.0,
+        -1.25,
+        0.0,
+        117.14127349853516,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "dtype": "uint8",
+      "voxelOffset": 352,
+      "niftiDatatypeCode": 2,
+      "sformCode": 2,
+      "qformCode": 0,
+      "sourceFile": "b2p-segmentation.nii.gz",
+      "sourceSha256": "92b11da7d3df24065bb917026978858209e5c35e4162eb62e94fc75f3cc02db9",
+      "sampling": "Nearest neighbor at original voxel indices 1.25 * display index",
+      "allLabelIdsRetained": true,
+      "voxelCenterCornerWorldCoordinatesIdentical": true,
+      "classes": [
+        {
+          "label": 0,
+          "originalVoxels": 15626598,
+          "displayVoxels": 8026207,
+          "originalVolumeMm3": 15626598,
+          "displayVolumeMm3": 15676185.546875,
+          "displayVolumeChangePercent": 0.3173278462465179
+        },
+        {
+          "label": 1,
+          "originalVoxels": 464858,
+          "displayVoxels": 238426,
+          "originalVolumeMm3": 464858,
+          "displayVolumeMm3": 465675.78125,
+          "displayVolumeChangePercent": 0.17592065749110208
+        },
+        {
+          "label": 2,
+          "originalVoxels": 479758,
+          "displayVoxels": 245065,
+          "originalVolumeMm3": 479758,
+          "displayVolumeMm3": 478642.578125,
+          "displayVolumeChangePercent": -0.23249677441543604
+        },
+        {
+          "label": 3,
+          "originalVoxels": 19858,
+          "displayVoxels": 10125,
+          "originalVolumeMm3": 19858,
+          "displayVolumeMm3": 19775.390625,
+          "displayVolumeChangePercent": -0.41600047839661647
+        },
+        {
+          "label": 4,
+          "originalVoxels": 825,
+          "displayVoxels": 455,
+          "originalVolumeMm3": 825,
+          "displayVolumeMm3": 888.671875,
+          "displayVolumeChangePercent": 7.717803030303028
+        },
+        {
+          "label": 5,
+          "originalVoxels": 21872,
+          "displayVoxels": 11203,
+          "originalVolumeMm3": 21872,
+          "displayVolumeMm3": 21880.859375,
+          "displayVolumeChangePercent": 0.040505555047554154
+        },
+        {
+          "label": 6,
+          "originalVoxels": 86537,
+          "displayVoxels": 44390,
+          "originalVolumeMm3": 86537,
+          "displayVolumeMm3": 86699.21875,
+          "displayVolumeChangePercent": 0.18745594370037644
+        },
+        {
+          "label": 7,
+          "originalVoxels": 14650,
+          "displayVoxels": 7557,
+          "originalVolumeMm3": 14650,
+          "displayVolumeMm3": 14759.765625,
+          "displayVolumeChangePercent": 0.7492534129692752
+        },
+        {
+          "label": 8,
+          "originalVoxels": 7226,
+          "displayVoxels": 3670,
+          "originalVolumeMm3": 7226,
+          "displayVolumeMm3": 7167.96875,
+          "displayVolumeChangePercent": -0.8030895377802327
+        },
+        {
+          "label": 9,
+          "originalVoxels": 10563,
+          "displayVoxels": 5326,
+          "originalVolumeMm3": 10563,
+          "displayVolumeMm3": 10402.34375,
+          "displayVolumeChangePercent": -1.5209339202877925
+        },
+        {
+          "label": 10,
+          "originalVoxels": 2694,
+          "displayVoxels": 1391,
+          "originalVolumeMm3": 2694,
+          "displayVolumeMm3": 2716.796875,
+          "displayVolumeChangePercent": 0.8462091685226492
+        },
+        {
+          "label": 11,
+          "originalVoxels": 618,
+          "displayVoxels": 277,
+          "originalVolumeMm3": 618,
+          "displayVolumeMm3": 541.015625,
+          "displayVolumeChangePercent": -12.457018608414238
+        },
+        {
+          "label": 12,
+          "originalVoxels": 2186,
+          "displayVoxels": 1100,
+          "originalVolumeMm3": 2186,
+          "displayVolumeMm3": 2148.4375,
+          "displayVolumeChangePercent": -1.7183211344922178
+        },
+        {
+          "label": 13,
+          "originalVoxels": 22248,
+          "displayVoxels": 11399,
+          "originalVolumeMm3": 22248,
+          "displayVolumeMm3": 22263.671875,
+          "displayVolumeChangePercent": 0.0704417250988909
+        },
+        {
+          "label": 14,
+          "originalVoxels": 5972,
+          "displayVoxels": 3041,
+          "originalVolumeMm3": 5972,
+          "displayVolumeMm3": 5939.453125,
+          "displayVolumeChangePercent": -0.5449912089752207
+        },
+        {
+          "label": 15,
+          "originalVoxels": 3088,
+          "displayVoxels": 1583,
+          "originalVolumeMm3": 3088,
+          "displayVolumeMm3": 3091.796875,
+          "displayVolumeChangePercent": 0.1229557966321293
+        },
+        {
+          "label": 16,
+          "originalVoxels": 899,
+          "displayVoxels": 458,
+          "originalVolumeMm3": 899,
+          "displayVolumeMm3": 894.53125,
+          "displayVolumeChangePercent": -0.4970800889877669
+        },
+        {
+          "label": 17,
+          "originalVoxels": 6766,
+          "displayVoxels": 3452,
+          "originalVolumeMm3": 6766,
+          "displayVolumeMm3": 6742.1875,
+          "displayVolumeChangePercent": -0.3519435412355887
+        }
+      ]
+    },
+    "meshUnchanged": true,
+    "warning": "These public display arrays retain recognizable anatomy and can be downloaded or reconstructed. They are not confidential or anonymized.",
+    "interpretation": "The saved mesh remains the actual historical Brain2Print result. MRI display precision is reduced and label boundaries are resampled. Rebuilding from display labels or rerunning on the quantized source may produce a different surface."
+  }
+}

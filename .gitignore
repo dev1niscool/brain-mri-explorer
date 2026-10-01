@@ -1,0 +1,20 @@
+.DS_Store
+node_modules/
+.env*
+*.log
+test-results/
+
+# Original MRI downloads are hosted only behind the Cloudflare password check.
+/public/data/deidentified-dicom.zip
+/public/data/b2p-segmentation.nii.gz
+/public/data/devin-mri-nifti-collection.zip
+/public/data/t2-axial.nii.gz
+/public/data/t1-sagittal.nii.gz
+/public/data/merge-axial.nii.gz
+/public/data/b2p-conformed.nii.gz
+/public/data/t1-axial.nii.gz
+/public/data/flair-coronal.nii.gz
+/public/data/flair-axial.nii.gz
+/public/data/adc.nii.gz
+/public/data/dwi-b1000.nii.gz
+/public/data/dwi-reference.nii.gz

@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "standFile": "b2p-display-stand.stl",
+  "sourceBrainFile": "b2p-print-full.stl",
+  "sourceBrainSha256": "a6ea51484f248c4ce4c720add83adf9e4fb449c2848a867db2dc132dd02e04b6",
+  "coordinateSystem": "Unshifted NIfTI RAS world millimeters, shared with the unchanged full Brain2Print STL",
+  "assemblyTransform": {
+    "translationMm": [
+      0,
+      0,
+      0
+    ],
+    "rotationDegrees": [
+      0,
+      0,
+      0
+    ],
+    "scale": 1
+  },
+  "printTranslationMm": [
+    0,
+    0,
+    77.16513061523438
+  ],
+  "dimensionsMm": [
+    161.03116607666016,
+    200.69817352294922,
+    29.53353500366211
+  ],
+  "boundsMm": [
+    [
+      -82.58555603027344,
+      -35.603782653808594,
+      -77.16513061523438
+    ],
+    [
+      78.44561004638672,
+      165.09439086914062,
+      -47.631595611572266
+    ]
+  ],
+  "topology": {
+    "watertight": true,
+    "windingConsistent": true,
+    "components": 1,
+    "faces": 19906,
+    "volumeCubicMm": 262184.81921749533
+  },
+  "nominalClearanceMm": 0.4,
+  "brainIntersectionCubicMm": 0.0,
+  "supports": [
+    {
+      "centerXYMm": [
+        -37.3277645111084,
+        72.0321039390564
+      ],
+      "topRadiiMm": [
+        16.218584098815917,
+        14.552835445404051
+      ],
+      "topHeightRangeMm": [
+        -56.05816646616717,
+        -47.63159374995612
+      ],
+      "sampledMinimumClearanceMm": 0.9099999999999966,
+      "sampledMedianClearanceMm": 3.7325797226487794,
+      "closestContactCenterXYMm": [
+        -24.95681953,
+        80.59915923999999
+      ],
+      "fitSamples": 56974,
+      "capSamplingResolutionMm": 0.5,
+      "additionalConservativeCapLoweringMm": 0.5,
+      "additionalProbes": "Source-mesh vertex projections, support vertices and face centroids, each with tiny XY offsets",
+      "additionalSupportLoweringMm": 1.0115429887126375,
+      "nearContactSampleCount": 5
+    },
+    {
+      "centerXYMm": [
+        33.18781852722168,
+        72.0321039390564
+      ],
+      "topRadiiMm": [
+        16.218584098815917,
+        14.552835445404051
+      ],
+      "topHeightRangeMm": [
+        -58.699217013214714,
+        -53.4387072096832
+      ],
+      "sampledMinimumClearanceMm": 0.9100000000000037,
+      "sampledMedianClearanceMm": 2.1251081754083714,
+      "closestContactCenterXYMm": [
+        34.1359011,
+        82.14593516
+      ],
+      "fitSamples": 56894,
+      "capSamplingResolutionMm": 0.5,
+      "additionalConservativeCapLoweringMm": 0.5,
+      "additionalProbes": "Source-mesh vertex projections, support vertices and face centroids, each with tiny XY offsets",
+      "additionalSupportLoweringMm": 0.510378045609979,
+      "nearContactSampleCount": 5
+    },
+    {
+      "centerXYMm": [
+        -2.0699729919433594,
+        12.20378044128418
+      ],
+      "topRadiiMm": [
+        20.44951908111572,
+        14.552835445404051
+      ],
+      "topHeightRangeMm": [
+        -64.72838192528926,
+        -56.31965293499732
+      ],
+      "sampledMinimumClearanceMm": 0.9099999999999966,
+      "sampledMedianClearanceMm": 5.5993121657533536,
+      "closestContactCenterXYMm": [
+        -6.44333458,
+        15.225698470000001
+      ],
+      "fitSamples": 68520,
+      "capSamplingResolutionMm": 0.5,
+      "additionalConservativeCapLoweringMm": 0.5,
+      "additionalProbes": "Source-mesh vertex projections, support vertices and face centroids, each with tiny XY offsets",
+      "additionalSupportLoweringMm": 1.4428571452484995,
+      "nearContactSampleCount": 5
+    }
+  ],
+  "stabilityEstimate": {
+    "brainCenterOfMassMm": [
+      -1.7337105156600787,
+      48.63959039662833,
+      1.0827228287366633
+    ],
+    "brainCenterOfMassInsideSupportTriangle": true,
+    "brainCenterOfMassSupportTriangleMarginMm": 13.298109392184513,
+    "sameDensityAssemblyCenterOfMassMm": [
+      -1.8648124472901304,
+      52.69509637651257,
+      -12.241907604705672
+    ],
+    "assemblyBaseEdgeMarginMm": 80.31042249367687,
+    "rigidAssemblyTipAngleDegrees": 51.04780596509987,
+    "assumptions": "Uniform density for each solid. Actual infill, shell thickness, friction and seating change these values; the removable brain can move independently."
+  },
+  "printing": {
+    "orientation": "Flat base on the bed; translate stand minZ to zero. No rotation.",
+    "scale": "Print brain and stand at the same percentage. STL units are millimetres.",
+    "suggestedLayerHeightMm": 0.2,
+    "supportMaterial": "The stand has upright or sloped walls and should not need generated supports. Inspect in your slicer.",
+    "caption": "DEVIN'S BRAIN / PROOF THAT I HAVE ONE.",
+    "embossedReliefMm": 0.55
+  },
+  "fittingNotes": [
+    "Three broad caps follow the lower surface of this exact source mesh. Tall areas are capped so the supports do not climb into fissures.",
+    "The brain lifts vertically off the stand; no brain drilling, sockets or attachment are required.",
+    "A small nominal clearance allows for printing variation. Check seating gently; sand contact high spots or add thin felt where needed.",
+    "Keep the assembled display away from edges. Fit and stability are geometric estimates, not a tested or certified physical product.",
+    "Regenerate the stand after changing the brain shape; the recorded source hash identifies the fitted model.",
+    "This stand is fitted to b2p-print-full.stl. Compact and older brain editions are not the fitted reference."
+  ],
+  "brainFile": "b2p-print-full.stl",
+  "kitFile": "b2p-display-kit.zip",
+  "notesFile": "b2p-print-notes.txt",
+  "units": "mm",
+  "brainSha256": "a6ea51484f248c4ce4c720add83adf9e4fb449c2848a867db2dc132dd02e04b6",
+  "standSha256": "dc45a357209d3de9da0872b2d7924c4c9503b0a5fbf2f83124f758b032253400",
+  "kitSha256": "c70834cb4a46850498b859d73b361e6b384d19f5bff99e46cd7d7f11283ac9e7",
+  "standBytes": 995384,
+  "kitBytes": 3056594,
+  "fit": {
+    "nominalVerticalClearanceMm": 0.4,
+    "sampledMinimumVerticalClearanceMm": 0.9099999999999966,
+    "clearanceSamplingNote": "Sampled vertical clearance, not a certified continuous minimum or printer tolerance",
+    "booleanIntersectionEmpty": true,
+    "brainCenterOfMassInsideSupportTriangle": true,
+    "supportTriangleMarginMm": 13.298109392184513
+  },
+  "kit": {
+    "entries": [
+      {
+        "file": "b2p-print-full.stl",
+        "bytes": 4841484,
+        "sha256": "a6ea51484f248c4ce4c720add83adf9e4fb449c2848a867db2dc132dd02e04b6"
+      },
+      {
+        "file": "b2p-display-stand.stl",
+        "bytes": 995384,
+        "sha256": "dc45a357209d3de9da0872b2d7924c4c9503b0a5fbf2f83124f758b032253400"
+      },
+      {
+        "file": "b2p-print-notes.txt",
+        "bytes": 3853,
+        "sha256": "9ee770220c075e4eca2f5d4eb5785e83fec67ece7bc2cf517edf2a8e15d8a6b6"
+      }
+    ],
+    "zipCrcCheckPassed": true,
+    "allEntriesByteIdenticalToPublicFiles": true
+  },
+  "verification": {
+    "exactFullBrainUnchanged": true,
+    "savedStlIntersectionEmpty": true,
+    "verticalRemovalChecks": [
+      {
+        "liftMm": 0.25,
+        "intersectionEmpty": true
+      },
+      {
+        "liftMm": 1.0,
+        "intersectionEmpty": true
+      },
+      {
+        "liftMm": 5.0,
+        "intersectionEmpty": true
+      },
+      {
+        "liftMm": 15.0,
+        "intersectionEmpty": true
+      }
+    ],
+    "noPhysicalPrintTestPerformed": true
+  },
+  "generation": {
+    "script": "processing/build_b2p_display_kit.py",
+    "baseScript": "processing/build_brain_stand.py",
+    "capSamplingResolutionMm": 0.5,
+    "additionalConservativeCapLoweringMm": 0.5,
+    "method": "Original three-support cradle with extra source-vertex clearance probes; lower each support top as needed, without changing the brain"
+  },
+  "assemblyDimensionsMm": [
+    161.03116607666016,
+    200.69817352294922,
+    139.93933868408203
+  ]
+}

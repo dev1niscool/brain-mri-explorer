@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; connect-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Brain2Print inside the MRI · Devin’s scan</title>
+  <script type="module" crossorigin src="./assets/context-Dxd_TsX9.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/index-BVYuGeSq.js">
+  <link rel="stylesheet" crossorigin href="./assets/context-DgP2BFAR.css">
+</head>
+<body>
+  <main class="context-lab" id="context-lab">
+    <section class="context-visual" aria-label="Brain2Print model inside the MRI">
+      <div class="context-toolbar" role="group" aria-label="MRI context display">
+        <button type="button" data-context-view="cutaway" aria-pressed="true" disabled>Cutaway</button>
+        <button type="button" data-context-view="whole" aria-pressed="false" disabled>Whole head</button>
+        <button type="button" data-context-view="planes" aria-pressed="false" disabled>MRI planes</button>
+        <button type="button" id="context-reset" class="context-reset" disabled>Reset view</button>
+      </div>
+      <div class="context-canvas-shell">
+        <canvas id="brain2print-context-canvas" tabindex="0" aria-label="Saved Brain2Print brain model inside a display copy of the same T1 MRI. In 3D, drag to rotate and scroll to zoom. In MRI planes, click to move the crosshair and scroll to browse." aria-describedby="context-gestures context-caption"></canvas>
+        <div id="context-loading" class="context-loading" role="status"><span id="context-loading-text">Loading the MRI and its matching brain model…</span><button type="button" id="context-retry" hidden>Try again</button></div>
+      </div>
+      <div class="context-footer"><span><i class="context-key context-mri"></i>MRI display copy</span><span><i class="context-key context-brain"></i>Predicted brain surface</span><span id="context-gestures">Drag to rotate · Scroll to zoom</span></div>
+    </section>
+    <aside class="context-controls" aria-label="MRI context controls">
+      <p class="context-eyebrow">ONE SCAN · SHARED COORDINATES</p>
+      <h1>See where it fits.</h1>
+      <p id="context-caption">The saved Brain2Print model sits inside a display copy of its MRI, in the same coordinates. Cut through the MRI to reveal the pink surface.</p>
+      <label class="context-range" for="context-cut">Cut depth <output id="context-cut-value" for="context-cut">55%</output><input id="context-cut" type="range" min="0" max="100" step="1" value="55" disabled></label>
+      <label class="context-check"><input id="context-brain-visible" type="checkbox" checked disabled>Show the brain model</label>
+      <label class="context-range" for="context-brain-opacity">Brain opacity <output id="context-brain-opacity-value" for="context-brain-opacity">100%</output><input id="context-brain-opacity" type="range" min="10" max="100" step="1" value="100" disabled></label>
+      <label class="context-check"><input id="context-through" type="checkbox" disabled>See brain through MRI</label>
+      <p class="context-hint" id="context-through-note">An illustrative overlay lets the brain show through the MRI.</p>
+      <div class="context-camera" role="group" aria-label="Camera presets"><button type="button" data-context-camera="front" disabled>Front</button><button type="button" data-context-camera="side" disabled>Side</button><button type="button" data-context-camera="angle" disabled>Angled</button></div>
+      <p id="context-status" class="context-status" role="status" aria-live="polite">Preparing the viewer…</p>
+      <p class="context-note">Pink is a display color. The gray image shows the captured MRI anatomy, not a segmented skull. This experimental brain model is incomplete, including omissions near the top of the cortex.</p>
+      <p class="context-note">The MRI was resampled for Brain2Print and reduced to 64 intensity levels for public display. Its spatial grid is unchanged. This adds no measured detail; the saved brain model is unchanged.</p>
+    </aside>
+  </main>
+</body>
+</html>

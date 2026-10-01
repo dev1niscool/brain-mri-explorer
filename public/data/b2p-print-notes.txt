@@ -1,0 +1,67 @@
+BRAIN2PRINT STL PRINT NOTES
+
+These two files come from the same saved Brain2Print reconstruction of the
+public T1 MRI. They are experimental models; upper cortical tissue is missing.
+Neither option reconstructs that missing anatomy.
+
+CHOOSE A FILE
+- b2p-print-full.stl: 96,828 triangles; 4,841,484 bytes.
+  Exact triangle coordinates from the saved Brain2Print MZ3. Already below 100k
+  triangles, so this is the default when your slicer handles it comfortably.
+- b2p-print-compact.stl: 40,000 triangles; 2,000,084 bytes.
+  About 59% fewer triangles. Topology-preserving quadric reduction, with no
+  smoothing, hole filling or rescaling. Compared with Full, sampled nearest-
+  surface deviation is 0.146 mm at the 95th percentile and 1.082 mm maximum.
+  These are geometric comparisons, not anatomical accuracy estimates or a
+  guaranteed continuous surface-distance bound.
+
+IMPORT AND CHECK SCALE
+1. Import either STL into your slicer and interpret coordinates as millimeters.
+   STL does not store a unit declaration.
+2. Before rotating the full model, its XYZ size is
+   141.031 x 161.698 x 121.939 mm
+   (right-left x front-back x bottom-top). The compact edition is
+   141.013 x 161.647 x 122.023 mm.
+3. Keep uniform scaling enabled. At 50%, all dimensions halve; the full edition
+   becomes 70.52 x 80.85 x 60.97 mm.
+   Smaller scale also makes grooves and thin features harder to print.
+4. The anatomical coordinate frame is retained, so the mesh is not centered on
+   the printer bed. Use your slicer's center-on-bed and drop-to-bed commands.
+
+SLICE BEFORE PRINTING
+5. Select your printer, nozzle and material profile. Choose orientation and
+   supports in the slicer; the underside is curved and this is not a flat-base
+   or support-free design. Review contact points, unsupported islands and thin
+   features in the layer preview before printing. Verify that every intended
+   part is present in the sliced result.
+6. Both exports passed closed-surface, winding, connected-component and Euler
+   topology checks. Those checks are not a printer-specific guarantee. If the
+   slicer reports a repair or discards features, inspect the changed preview;
+   do not assume that automatic repair preserves the original surface.
+7. Use Compact to reduce polygon-processing cost. Reducing triangle count is
+   not the same as lowering layer height, adding MRI detail or reducing plastic
+   use at a fixed model size and print profile.
+
+FITTED DISPLAY STAND
+Use b2p-display-stand.stl with b2p-print-full.stl. The b2p-display-kit.zip download
+contains this exact Full brain, its fitted three-point stand, and these notes.
+Print brain and stand at the same uniform percentage. Put the stand's flat
+base on the bed; use center-on-bed and drop-to-bed without rotating the stand.
+After printing, rest the brain gently on the three fitted caps. It lifts off
+vertically; no holes, sockets or glue are required. Inspect the fit gently and
+adjust printing high spots or add thin felt if needed. Fit and stability were
+checked geometrically; the combination has not been physically print-tested.
+See b2p-display-stand.json for the exact source hash, clearance and fit checks.
+
+The Compact edition changes local surfaces and is not the fitted reference.
+The older site's stand and split halves were fitted to a different generated
+brain mesh; they are separate accessories and are not this Brain2Print kit.
+
+SOURCE AND REPRODUCIBILITY
+Source: b2p-brain.mz3
+SHA256: 31bc0f1d884751ede46abaa04bb962b02a5efd3cad2bf506db3ef94026ee2d91
+Full STL SHA256: a6ea51484f248c4ce4c720add83adf9e4fb449c2848a867db2dc132dd02e04b6
+Compact STL SHA256: 333ba4b130f73194477c7d0f1466f3c43d13566d34ae76ebd7c5f74e68cb6671
+Detailed numerical checks: b2p-print-editions.json
+Generator: processing/build_b2p_print_editions.py
+Both exports preserve the source RAS millimeter coordinate frame.

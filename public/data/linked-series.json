@@ -1,0 +1,1085 @@
+{
+  "version": 2,
+  "coordinateSystem": "NIfTI RAS world mm",
+  "matrixOrder": "row-major 4x4",
+  "voxelOrder": "x-fastest",
+  "viewerCenterWorldRAS": [
+    -2.17477,
+    52.96148,
+    -1.443
+  ],
+  "coordinateNote": "Affines and linked grids use unshifted NIfTI world coordinates. The legacy model center is supplied only for explicit conversions.",
+  "virtualGrid": {
+    "spacingMm": 0.5,
+    "bounds": "Axis-aligned RAS bounds of all eight transformed voxel-center corners (0 to dims-1)",
+    "origin": "Minimum RAS corner coordinate on each axis",
+    "dims": "ceil((maximum-minimum)/spacingMm)+1",
+    "interpolation": "Trilinear sampling of public 8-bit display values on the unchanged native spatial grid",
+    "outsideValue": 0,
+    "boundaryEpsilonVoxels": 1e-06
+  },
+  "limitations": [
+    "A 0.5 mm display grid does not create 0.5 mm measured anatomical resolution.",
+    "Stored anatomical pixels are approximately 0.47 mm apart, with a smaller acquisition matrix; diffusion stored pixels are approximately 0.94 mm apart.",
+    "All stacks have 5 mm thick slices about 6.5 mm apart. Trilinear interpolation spans the approximately 1.5 mm gaps and cannot recover missing anatomy.",
+    "The acquisitions retain their measured obliquity. RAS reformats can mix adjacent acquired slices even in a nominal axial view.",
+    "Public MRI arrays use 8-bit intensity quantization. Original scalar precision is available only through authenticated downloads.",
+    "These public display arrays retain recognizable anatomy and can be downloaded or reconstructed. They are not confidential or anonymized."
+  ],
+  "series": [
+    {
+      "id": "t1-axial",
+      "file": "display-t1-axial.nii.gz",
+      "dtype": "uint8",
+      "endian": "little",
+      "niftiDatatypeCode": 2,
+      "voxelOffset": 352,
+      "sformCode": 2,
+      "qformCode": 0,
+      "dims": [
+        512,
+        512,
+        29
+      ],
+      "spacing": [
+        0.4687999965121461,
+        0.4688000073148025,
+        6.5000834697507
+      ],
+      "affine": [
+        0.4652034640312195,
+        0.044978074729442596,
+        0.5070000290870667,
+        -139.04977416992188,
+        -0.052123863250017166,
+        0.4539579749107361,
+        1.4529999494552612,
+        -59.153228759765625,
+        -0.02534317784011364,
+        -0.10803969949483871,
+        6.3152852058410645,
+        -68.28434753417969,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "inverseAffine": [
+        2.1167371330589737,
+        -0.23718211968029976,
+        -0.11536457283822348,
+        272.4241375609459,
+        0.2046510820694971,
+        2.065556261374509,
+        -0.4916660367237637,
+        117.06791426824803,
+        0.011995544863421392,
+        0.0343850074939112,
+        0.14947176785960262,
+        13.908544161570829,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "sourcePlane": {
+        "axis": 2,
+        "name": "axial",
+        "sliceThicknessMm": 5.0,
+        "centerSpacingMm": 6.5000834697507,
+        "gapMm": 1.5000834697506997
+      },
+      "sourceAcquisitionMatrix": [
+        0,
+        320,
+        256,
+        0
+      ],
+      "scalarRange": [
+        0,
+        255
+      ],
+      "defaultWindow": {
+        "low": -0.02891156462585034,
+        "high": 183.27040816326533,
+        "source": "Original DICOM LINEAR endpoints mapped into public display values after quantization",
+        "nativeSliceIndex": 14,
+        "scalarDomain": "Public 8-bit display image values; not original scalar or quantitative ADC values"
+      },
+      "sha256": "3a85f2f8e605169e6e30a2a4ec4c16456740a134f8ad45d7cf0988c275d36126",
+      "compressedBytes": 2416972,
+      "decodedBytes": 7602528,
+      "voxelBytes": 7602176,
+      "displayData": true,
+      "intensityMapping": {
+        "method": "Round the complete finite source scalar range to 256 equally spaced levels; no clipping or spatial resampling",
+        "sourceRange": [
+          0.0,
+          4410.0
+        ],
+        "displayRange": [
+          0,
+          255
+        ],
+        "sourceUnitsPerDisplayStep": 17.294117647058822,
+        "maximumObservedSourceScalarError": 8.647058823529733,
+        "sourceScalarValuesRecoverableExactly": false
+      },
+      "originalSource": {
+        "file": "t1-axial.nii.gz",
+        "sha256": "3ce918fdba00ade86dba2e07a6bb283d260e04b360cac0977575c74260ca65c4",
+        "defaultWindow": {
+          "center": 1585.0,
+          "width": 3171.0,
+          "low": -0.5,
+          "high": 3169.5,
+          "source": "DICOM LINEAR window from the central native slice, used consistently for the stack",
+          "nativeSliceIndex": 14,
+          "scalarDomain": "Source modality-rescaled values already stored in this NIfTI; no further rescale"
+        },
+        "sourceRescale": {
+          "slope": 1.0,
+          "intercept": 0.0,
+          "alreadyAppliedToStoredValues": true
+        }
+      }
+    },
+    {
+      "id": "t2-axial",
+      "file": "display-t2-axial.nii.gz",
+      "dtype": "uint8",
+      "endian": "little",
+      "niftiDatatypeCode": 2,
+      "voxelOffset": 352,
+      "sformCode": 2,
+      "qformCode": 0,
+      "dims": [
+        512,
+        512,
+        29
+      ],
+      "spacing": [
+        0.4687999965121461,
+        0.4688000073148025,
+        6.5000834697507
+      ],
+      "affine": [
+        0.4652034640312195,
+        0.044978074729442596,
+        0.5070000290870667,
+        -139.04977416992188,
+        -0.052123863250017166,
+        0.4539579749107361,
+        1.4529999494552612,
+        -59.153228759765625,
+        -0.02534317784011364,
+        -0.10803969949483871,
+        6.3152852058410645,
+        -68.28434753417969,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "inverseAffine": [
+        2.1167371330589737,
+        -0.23718211968029976,
+        -0.11536457283822348,
+        272.4241375609459,
+        0.2046510820694971,
+        2.065556261374509,
+        -0.4916660367237637,
+        117.06791426824803,
+        0.011995544863421392,
+        0.0343850074939112,
+        0.14947176785960262,
+        13.908544161570829,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "sourcePlane": {
+        "axis": 2,
+        "name": "axial",
+        "sliceThicknessMm": 5.0,
+        "centerSpacingMm": 6.5000834697507,
+        "gapMm": 1.5000834697506997
+      },
+      "sourceAcquisitionMatrix": [
+        0,
+        320,
+        256,
+        0
+      ],
+      "scalarRange": [
+        0,
+        255
+      ],
+      "defaultWindow": {
+        "low": 0.0,
+        "high": 206.91350286532952,
+        "source": "Original DICOM LINEAR endpoints mapped into public display values after quantization",
+        "nativeSliceIndex": 14,
+        "scalarDomain": "Public 8-bit display image values; not original scalar or quantitative ADC values"
+      },
+      "sha256": "f742951e89be86a069e1d85dced3e3210496006e8111999674a991e418e64d50",
+      "compressedBytes": 2432858,
+      "decodedBytes": 7602528,
+      "voxelBytes": 7602176,
+      "displayData": true,
+      "intensityMapping": {
+        "method": "Round the complete finite source scalar range to 256 equally spaced levels; no clipping or spatial resampling",
+        "sourceRange": [
+          0.0,
+          5584.0
+        ],
+        "displayRange": [
+          0,
+          255
+        ],
+        "sourceUnitsPerDisplayStep": 21.898039215686275,
+        "maximumObservedSourceScalarError": 10.949019607843184,
+        "sourceScalarValuesRecoverableExactly": false
+      },
+      "originalSource": {
+        "file": "t2-axial.nii.gz",
+        "sha256": "ca6d30afad606709389d53c5bdb02b80ecb71a5c2b25738fdc8139a406626e34",
+        "defaultWindow": {
+          "center": 2266.0,
+          "width": 4532.0,
+          "low": 0.0,
+          "high": 4531.0,
+          "source": "DICOM LINEAR window from the central native slice, used consistently for the stack",
+          "nativeSliceIndex": 14,
+          "scalarDomain": "Source modality-rescaled values already stored in this NIfTI; no further rescale"
+        },
+        "sourceRescale": {
+          "slope": 1.0,
+          "intercept": 0.0,
+          "alreadyAppliedToStoredValues": true
+        }
+      }
+    },
+    {
+      "id": "flair-axial",
+      "file": "display-flair-axial.nii.gz",
+      "dtype": "uint8",
+      "endian": "little",
+      "niftiDatatypeCode": 2,
+      "voxelOffset": 352,
+      "sformCode": 2,
+      "qformCode": 0,
+      "dims": [
+        512,
+        512,
+        29
+      ],
+      "spacing": [
+        0.4687999965121461,
+        0.4688000073148025,
+        6.5000834697507
+      ],
+      "affine": [
+        0.4652034640312195,
+        0.044978074729442596,
+        0.5070000290870667,
+        -139.04977416992188,
+        -0.052123863250017166,
+        0.4539579749107361,
+        1.4529999494552612,
+        -59.153228759765625,
+        -0.02534317784011364,
+        -0.10803969949483871,
+        6.3152852058410645,
+        -68.28434753417969,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "inverseAffine": [
+        2.1167371330589737,
+        -0.23718211968029976,
+        -0.11536457283822348,
+        272.4241375609459,
+        0.2046510820694971,
+        2.065556261374509,
+        -0.4916660367237637,
+        117.06791426824803,
+        0.011995544863421392,
+        0.0343850074939112,
+        0.14947176785960262,
+        13.908544161570829,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "sourcePlane": {
+        "axis": 2,
+        "name": "axial",
+        "sliceThicknessMm": 5.0,
+        "centerSpacingMm": 6.5000834697507,
+        "gapMm": 1.5000834697506997
+      },
+      "sourceAcquisitionMatrix": [
+        0,
+        320,
+        224,
+        0
+      ],
+      "scalarRange": [
+        0,
+        255
+      ],
+      "defaultWindow": {
+        "low": -0.06135707410972089,
+        "high": 117.98965351299327,
+        "source": "Original DICOM LINEAR endpoints mapped into public display values after quantization",
+        "nativeSliceIndex": 14,
+        "scalarDomain": "Public 8-bit display image values; not original scalar or quantitative ADC values"
+      },
+      "sha256": "2077852f5ec38ccc60dc79ed92c5c9f06afb3c11bb76b9811b3f8af3f2c368ef",
+      "compressedBytes": 2705361,
+      "decodedBytes": 7602528,
+      "voxelBytes": 7602176,
+      "displayData": true,
+      "intensityMapping": {
+        "method": "Round the complete finite source scalar range to 256 equally spaced levels; no clipping or spatial resampling",
+        "sourceRange": [
+          0.0,
+          2078.0
+        ],
+        "displayRange": [
+          0,
+          255
+        ],
+        "sourceUnitsPerDisplayStep": 8.149019607843137,
+        "maximumObservedSourceScalarError": 4.074509803921501,
+        "sourceScalarValuesRecoverableExactly": false
+      },
+      "originalSource": {
+        "file": "flair-axial.nii.gz",
+        "sha256": "01361f0a7405191f02fa96d0e597f5ea07805ecbb217e6dc5fc73d6aefe4e1ad",
+        "defaultWindow": {
+          "center": 481.0,
+          "width": 963.0,
+          "low": -0.5,
+          "high": 961.5,
+          "source": "DICOM LINEAR window from the central native slice, used consistently for the stack",
+          "nativeSliceIndex": 14,
+          "scalarDomain": "Source modality-rescaled values already stored in this NIfTI; no further rescale"
+        },
+        "sourceRescale": {
+          "slope": 1.0,
+          "intercept": 0.0,
+          "alreadyAppliedToStoredValues": true
+        }
+      }
+    },
+    {
+      "id": "t1-sagittal",
+      "file": "display-t1-sagittal.nii.gz",
+      "dtype": "uint8",
+      "endian": "little",
+      "niftiDatatypeCode": 2,
+      "voxelOffset": 352,
+      "sformCode": 2,
+      "qformCode": 0,
+      "dims": [
+        26,
+        512,
+        512
+      ],
+      "spacing": [
+        6.500029719409179,
+        0.46880000362850444,
+        0.4688000137363765
+      ],
+      "affine": [
+        6.452700138092041,
+        0.040846530348062515,
+        0.03899438679218292,
+        -100.1654052734375,
+        -0.6690000295639038,
+        0.4558141827583313,
+        0.09838113188743591,
+        -78.00279998779297,
+        -0.4068000018596649,
+        -0.10167809575796127,
+        0.45669907331466675,
+        -92.39871215820312,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "inverseAffine": [
+        0.15272519205409704,
+        -0.01583402875417759,
+        -0.009629219321107949,
+        13.172954715289869,
+        0.18586205105630985,
+        2.074017982998905,
+        -0.4626499718899731,
+        137.64789598529464,
+        0.1774181568808907,
+        0.44764907156181305,
+        2.0780455246602343,
+        244.69777286532124,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "sourcePlane": {
+        "axis": 0,
+        "name": "sagittal",
+        "sliceThicknessMm": 5.0,
+        "centerSpacingMm": 6.500029719409179,
+        "gapMm": 1.500029719409179
+      },
+      "sourceAcquisitionMatrix": [
+        0,
+        320,
+        224,
+        0
+      ],
+      "scalarRange": [
+        0,
+        255
+      ],
+      "defaultWindow": {
+        "low": 0.07836508912108174,
+        "high": 162.24185617701292,
+        "source": "Original DICOM LINEAR endpoints mapped into public display values after quantization",
+        "nativeSliceIndex": 13,
+        "scalarDomain": "Public 8-bit display image values; not original scalar or quantitative ADC values"
+      },
+      "sha256": "ea15ef1df7f6dcb5924f70cfeec1950ed5023f186d9ded7a76d83f0c5bc9ba0a",
+      "compressedBytes": 3550703,
+      "decodedBytes": 6816096,
+      "voxelBytes": 6815744,
+      "displayData": true,
+      "intensityMapping": {
+        "method": "Round the complete finite source scalar range to 256 equally spaced levels; no clipping or spatial resampling",
+        "sourceRange": [
+          0.0,
+          4881.0
+        ],
+        "displayRange": [
+          0,
+          255
+        ],
+        "sourceUnitsPerDisplayStep": 19.141176470588235,
+        "maximumObservedSourceScalarError": 9.56470588235294,
+        "sourceScalarValuesRecoverableExactly": false
+      },
+      "originalSource": {
+        "file": "t1-sagittal.nii.gz",
+        "sha256": "e2de9bc8a2e44f32a5369d773273e118492b96ce1ecc0e88894f0ed63a5879f3",
+        "defaultWindow": {
+          "center": 1554.0,
+          "width": 3105.0,
+          "low": 1.5,
+          "high": 3105.5,
+          "source": "DICOM LINEAR window from the central native slice, used consistently for the stack",
+          "nativeSliceIndex": 13,
+          "scalarDomain": "Source modality-rescaled values already stored in this NIfTI; no further rescale"
+        },
+        "sourceRescale": {
+          "slope": 1.0,
+          "intercept": 0.0,
+          "alreadyAppliedToStoredValues": true
+        }
+      }
+    },
+    {
+      "id": "flair-coronal",
+      "file": "display-flair-coronal.nii.gz",
+      "dtype": "uint8",
+      "endian": "little",
+      "niftiDatatypeCode": 2,
+      "voxelOffset": 352,
+      "sformCode": 2,
+      "qformCode": 0,
+      "dims": [
+        512,
+        34,
+        512
+      ],
+      "spacing": [
+        0.4688000146827374,
+        6.500005611952964,
+        0.468800009862171
+      ],
+      "affine": [
+        0.46720442175865173,
+        0.453000009059906,
+        0.020618611946702003,
+        -132.07656860351562,
+        -0.0362260527908802,
+        6.3436598777771,
+        0.09556881338357925,
+        -58.571929931640625,
+        -0.013459389097988605,
+        -1.3427000045776367,
+        0.4584920108318329,
+        -108.88646697998047,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "inverseAffine": [
+        2.1258499662421886,
+        -0.16477197887058356,
+        -0.061255185145706895,
+        264.4540954113416,
+        0.0107264616330978,
+        0.15014540037137328,
+        -0.0317789234146825,
+        6.750725420814868,
+        0.09381856374208233,
+        0.4348658098276425,
+        2.086199888803119,
+        265.021099019055,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "sourcePlane": {
+        "axis": 1,
+        "name": "coronal",
+        "sliceThicknessMm": 5.0,
+        "centerSpacingMm": 6.500005611952964,
+        "gapMm": 1.5000056119529637
+      },
+      "sourceAcquisitionMatrix": [
+        0,
+        320,
+        224,
+        0
+      ],
+      "scalarRange": [
+        0,
+        255
+      ],
+      "defaultWindow": {
+        "low": 4.199341279799247,
+        "high": 81.78717063989963,
+        "source": "Original DICOM LINEAR endpoints mapped into public display values after quantization",
+        "nativeSliceIndex": 17,
+        "scalarDomain": "Public 8-bit display image values; not original scalar or quantitative ADC values"
+      },
+      "sha256": "d2a2a40314b9c68dffbcac8bd2cd5fe18f9687acdf79e8aca330a0db71f1ac8f",
+      "compressedBytes": 2587064,
+      "decodedBytes": 8913248,
+      "voxelBytes": 8912896,
+      "displayData": true,
+      "intensityMapping": {
+        "method": "Round the complete finite source scalar range to 256 equally spaced levels; no clipping or spatial resampling",
+        "sourceRange": [
+          0.0,
+          3188.0
+        ],
+        "displayRange": [
+          0,
+          255
+        ],
+        "sourceUnitsPerDisplayStep": 12.501960784313725,
+        "maximumObservedSourceScalarError": 6.250980392156862,
+        "sourceScalarValuesRecoverableExactly": false
+      },
+      "originalSource": {
+        "file": "flair-coronal.nii.gz",
+        "sha256": "79eb10e40680a83d6a07ca2a9d17c1be8bd5778ab379784c51e53680179c25ad",
+        "defaultWindow": {
+          "center": 538.0,
+          "width": 971.0,
+          "low": 52.5,
+          "high": 1022.5,
+          "source": "DICOM LINEAR window from the central native slice, used consistently for the stack",
+          "nativeSliceIndex": 17,
+          "scalarDomain": "Source modality-rescaled values already stored in this NIfTI; no further rescale"
+        },
+        "sourceRescale": {
+          "slope": 1.0,
+          "intercept": 0.0,
+          "alreadyAppliedToStoredValues": true
+        }
+      }
+    },
+    {
+      "id": "merge-axial",
+      "file": "display-merge-axial.nii.gz",
+      "dtype": "uint8",
+      "endian": "little",
+      "niftiDatatypeCode": 2,
+      "voxelOffset": 352,
+      "sformCode": 2,
+      "qformCode": 0,
+      "dims": [
+        512,
+        512,
+        29
+      ],
+      "spacing": [
+        0.4687999965121461,
+        0.4688000073148025,
+        6.5000834697507
+      ],
+      "affine": [
+        0.4652034640312195,
+        0.044978074729442596,
+        0.5070000290870667,
+        -139.04977416992188,
+        -0.052123863250017166,
+        0.4539579749107361,
+        1.4529999494552612,
+        -59.153228759765625,
+        -0.02534317784011364,
+        -0.10803969949483871,
+        6.3152852058410645,
+        -68.28434753417969,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "inverseAffine": [
+        2.1167371330589737,
+        -0.23718211968029976,
+        -0.11536457283822348,
+        272.4241375609459,
+        0.2046510820694971,
+        2.065556261374509,
+        -0.4916660367237637,
+        117.06791426824803,
+        0.011995544863421392,
+        0.0343850074939112,
+        0.14947176785960262,
+        13.908544161570829,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "sourcePlane": {
+        "axis": 2,
+        "name": "axial",
+        "sliceThicknessMm": 5.0,
+        "centerSpacingMm": 6.5000834697507,
+        "gapMm": 1.5000834697506997
+      },
+      "sourceAcquisitionMatrix": [
+        0,
+        256,
+        224,
+        0
+      ],
+      "scalarRange": [
+        0,
+        255
+      ],
+      "defaultWindow": {
+        "low": 7.715127701375246,
+        "high": 183.15913555992142,
+        "source": "Original DICOM LINEAR endpoints mapped into public display values after quantization",
+        "nativeSliceIndex": 14,
+        "scalarDomain": "Public 8-bit display image values; not original scalar or quantitative ADC values"
+      },
+      "sha256": "e5c6fdbee27e86d0907b0aa110770bf6cebb0ea86a3a5bde1901adc056bde923",
+      "compressedBytes": 3151602,
+      "decodedBytes": 7602528,
+      "voxelBytes": 7602176,
+      "displayData": true,
+      "intensityMapping": {
+        "method": "Round the complete finite source scalar range to 256 equally spaced levels; no clipping or spatial resampling",
+        "sourceRange": [
+          0.0,
+          2545.0
+        ],
+        "displayRange": [
+          0,
+          255
+        ],
+        "sourceUnitsPerDisplayStep": 9.980392156862745,
+        "maximumObservedSourceScalarError": 4.980392156862763,
+        "sourceScalarValuesRecoverableExactly": false
+      },
+      "originalSource": {
+        "file": "merge-axial.nii.gz",
+        "sha256": "2b06da0043646c37d141f9f0601901ea86bba9c94c422098628eab9fcd59ed97",
+        "defaultWindow": {
+          "center": 953.0,
+          "width": 1752.0,
+          "low": 77.0,
+          "high": 1828.0,
+          "source": "DICOM LINEAR window from the central native slice, used consistently for the stack",
+          "nativeSliceIndex": 14,
+          "scalarDomain": "Source modality-rescaled values already stored in this NIfTI; no further rescale"
+        },
+        "sourceRescale": {
+          "slope": 1.0,
+          "intercept": 0.0,
+          "alreadyAppliedToStoredValues": true
+        }
+      }
+    },
+    {
+      "id": "dwi-b1000",
+      "file": "display-dwi-b1000.nii.gz",
+      "dtype": "uint8",
+      "endian": "little",
+      "niftiDatatypeCode": 2,
+      "voxelOffset": 352,
+      "sformCode": 2,
+      "qformCode": 0,
+      "dims": [
+        256,
+        256,
+        29
+      ],
+      "spacing": [
+        0.9375000277303092,
+        0.9374999717814875,
+        6.500058915880993
+      ],
+      "affine": [
+        0.9303077459335327,
+        0.0899462103843689,
+        0.5070000290870667,
+        -138.76675415039062,
+        -0.10423628985881805,
+        0.9078190326690674,
+        1.4529999494552612,
+        -58.92960739135742,
+        -0.05068131536245346,
+        -0.21605665981769562,
+        6.31525993347168,
+        -68.3578109741211,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "inverseAffine": [
+        1.058481437022585,
+        -0.11860340681731922,
+        -0.05768873792776844,
+        135.94930530244113,
+        0.10233593751037406,
+        1.0328881774731533,
+        -0.24586015608423145,
+        58.26205858324563,
+        0.011995641216814233,
+        0.03438518686699447,
+        0.1494723170096792,
+        13.908502149771952,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "sourcePlane": {
+        "axis": 2,
+        "name": "axial",
+        "sliceThicknessMm": 5.0,
+        "centerSpacingMm": 6.500058915880993,
+        "gapMm": 1.5000589158809934
+      },
+      "sourceAcquisitionMatrix": [
+        128,
+        0,
+        0,
+        128
+      ],
+      "scalarRange": [
+        0,
+        255
+      ],
+      "defaultWindow": {
+        "low": 0.05565862708719852,
+        "high": 80.56586270871986,
+        "source": "Original DICOM LINEAR endpoints mapped into public display values after quantization",
+        "nativeSliceIndex": 14,
+        "scalarDomain": "Public 8-bit display image values; not original scalar or quantitative ADC values"
+      },
+      "sha256": "63eae01f3e5e46711a1d8696a02d259c90b7463c9d344f624e0fc98f087c902d",
+      "compressedBytes": 439486,
+      "decodedBytes": 1900896,
+      "voxelBytes": 1900544,
+      "displayData": true,
+      "intensityMapping": {
+        "method": "Round the complete finite source scalar range to 256 equally spaced levels; no clipping or spatial resampling",
+        "sourceRange": [
+          0.0,
+          9163.0
+        ],
+        "displayRange": [
+          0,
+          255
+        ],
+        "sourceUnitsPerDisplayStep": 35.93333333333333,
+        "maximumObservedSourceScalarError": 17.933333333333394,
+        "sourceScalarValuesRecoverableExactly": false
+      },
+      "originalSource": {
+        "file": "dwi-b1000.nii.gz",
+        "sha256": "ffc5baf1e6cae639fd65b42c590c42c56b42c43dabc7f004f66b2c5774b13886",
+        "defaultWindow": {
+          "center": 1449.0,
+          "width": 2894.0,
+          "low": 2.0,
+          "high": 2895.0,
+          "source": "DICOM LINEAR window from the central native slice, used consistently for the stack",
+          "nativeSliceIndex": 14,
+          "scalarDomain": "Source modality-rescaled values already stored in this NIfTI; no further rescale"
+        },
+        "sourceRescale": {
+          "slope": 1.0,
+          "intercept": 0.0,
+          "alreadyAppliedToStoredValues": true
+        }
+      }
+    },
+    {
+      "id": "dwi-reference",
+      "file": "display-dwi-reference.nii.gz",
+      "dtype": "uint8",
+      "endian": "little",
+      "niftiDatatypeCode": 2,
+      "voxelOffset": 352,
+      "sformCode": 2,
+      "qformCode": 0,
+      "dims": [
+        256,
+        256,
+        29
+      ],
+      "spacing": [
+        0.9375000277303092,
+        0.9374999717814875,
+        6.500058915880993
+      ],
+      "affine": [
+        0.9303077459335327,
+        0.0899462103843689,
+        0.5070000290870667,
+        -138.76675415039062,
+        -0.10423628985881805,
+        0.9078190326690674,
+        1.4529999494552612,
+        -58.92960739135742,
+        -0.05068131536245346,
+        -0.21605665981769562,
+        6.31525993347168,
+        -68.3578109741211,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "inverseAffine": [
+        1.058481437022585,
+        -0.11860340681731922,
+        -0.05768873792776844,
+        135.94930530244113,
+        0.10233593751037406,
+        1.0328881774731533,
+        -0.24586015608423145,
+        58.26205858324563,
+        0.011995641216814233,
+        0.03438518686699447,
+        0.1494723170096792,
+        13.908502149771952,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "sourcePlane": {
+        "axis": 2,
+        "name": "axial",
+        "sliceThicknessMm": 5.0,
+        "centerSpacingMm": 6.500058915880993,
+        "gapMm": 1.5000589158809934
+      },
+      "sourceAcquisitionMatrix": [
+        128,
+        0,
+        0,
+        128
+      ],
+      "scalarRange": [
+        0,
+        255
+      ],
+      "defaultWindow": {
+        "low": 0.0,
+        "high": 119.25547902316845,
+        "source": "Original DICOM LINEAR endpoints mapped into public display values after quantization",
+        "nativeSliceIndex": 14,
+        "scalarDomain": "Public 8-bit display image values; not original scalar or quantitative ADC values"
+      },
+      "sha256": "dbcbef4cb3d7323ed6d489768dd4d13c7120f92fcca171b211ee43ae726e9e7c",
+      "compressedBytes": 488226,
+      "decodedBytes": 1900896,
+      "voxelBytes": 1900544,
+      "displayData": true,
+      "intensityMapping": {
+        "method": "Round the complete finite source scalar range to 256 equally spaced levels; no clipping or spatial resampling",
+        "sourceRange": [
+          0.0,
+          23955.0
+        ],
+        "displayRange": [
+          0,
+          255
+        ],
+        "sourceUnitsPerDisplayStep": 93.94117647058823,
+        "maximumObservedSourceScalarError": 46.94117647058829,
+        "sourceScalarValuesRecoverableExactly": false
+      },
+      "originalSource": {
+        "file": "dwi-reference.nii.gz",
+        "sha256": "f1dd210b76b388f458003ccbd59cb72063e106945aa9406a6fe9961ed6200a28",
+        "defaultWindow": {
+          "center": 5602.0,
+          "width": 11204.0,
+          "low": 0.0,
+          "high": 11203.0,
+          "source": "DICOM LINEAR window from the central native slice, used consistently for the stack",
+          "nativeSliceIndex": 14,
+          "scalarDomain": "Source modality-rescaled values already stored in this NIfTI; no further rescale"
+        },
+        "sourceRescale": {
+          "slope": 1.0,
+          "intercept": 0.0,
+          "alreadyAppliedToStoredValues": true
+        }
+      }
+    },
+    {
+      "id": "adc",
+      "file": "display-adc.nii.gz",
+      "dtype": "uint8",
+      "endian": "little",
+      "niftiDatatypeCode": 2,
+      "voxelOffset": 352,
+      "sformCode": 2,
+      "qformCode": 0,
+      "dims": [
+        256,
+        256,
+        29
+      ],
+      "spacing": [
+        0.9374999692327817,
+        0.9375000317835689,
+        6.499984873960535
+      ],
+      "affine": [
+        0.9303076863288879,
+        0.08994626998901367,
+        0.5068206787109375,
+        -138.7667694091797,
+        -0.10423630475997925,
+        0.9078190922737122,
+        1.452789306640625,
+        -58.92961120605469,
+        -0.05068129673600197,
+        -0.21605664491653442,
+        6.31524658203125,
+        -68.35783386230469,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "inverseAffine": [
+        1.058483465761455,
+        -0.11859782900717511,
+        -0.05766420139243055,
+        135.95160716488795,
+        0.10233874927545444,
+        1.032896107799132,
+        -0.24582536793807705,
+        58.26529401052985,
+        0.011995775691065852,
+        0.034385573550229226,
+        0.14947402084852449,
+        13.908663803512688,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "sourcePlane": {
+        "axis": 2,
+        "name": "axial",
+        "sliceThicknessMm": 5.0,
+        "centerSpacingMm": 6.499984873960535,
+        "gapMm": 1.4999848739605346
+      },
+      "sourceAcquisitionMatrix": [
+        128,
+        0,
+        0,
+        128
+      ],
+      "scalarRange": [
+        0,
+        255
+      ],
+      "defaultWindow": {
+        "low": 0.06227106227106227,
+        "high": 227.6007326007326,
+        "source": "Original DICOM LINEAR endpoints mapped into public display values after quantization",
+        "nativeSliceIndex": 14,
+        "scalarDomain": "Public 8-bit display image values; not original scalar or quantitative ADC values"
+      },
+      "sha256": "1ff37fa4d62cbdb6408fbaab051647d53aa278d3b6401bf094f531b574a16670",
+      "compressedBytes": 574329,
+      "decodedBytes": 1900896,
+      "voxelBytes": 1900544,
+      "displayData": true,
+      "intensityMapping": {
+        "method": "Round the complete finite source scalar range to 256 equally spaced levels; no clipping or spatial resampling",
+        "sourceRange": [
+          -1.0,
+          4094.0
+        ],
+        "displayRange": [
+          0,
+          255
+        ],
+        "sourceUnitsPerDisplayStep": 16.058823529411764,
+        "maximumObservedSourceScalarError": 8.0,
+        "sourceScalarValuesRecoverableExactly": false
+      },
+      "originalSource": {
+        "file": "adc.nii.gz",
+        "sha256": "41bba610cd5eee52e4e12219e14fcd2835dedf6e4d420fc6f182ddb31c821deb",
+        "defaultWindow": {
+          "center": 1827.5,
+          "width": 3655.0,
+          "low": 0.0,
+          "high": 3654.0,
+          "source": "DICOM LINEAR window from the central native slice, used consistently for the stack",
+          "nativeSliceIndex": 14,
+          "scalarDomain": "Source modality-rescaled values already stored in this NIfTI; no further rescale"
+        },
+        "sourceRescale": {
+          "slope": 1.0,
+          "intercept": -1.0,
+          "alreadyAppliedToStoredValues": true
+        }
+      }
+    }
+  ],
+  "displayData": true
+}
